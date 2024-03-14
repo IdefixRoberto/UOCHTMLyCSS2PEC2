@@ -1,0 +1,137 @@
+//Aquest arxiu es per a crear elements que pugen ser utilitzats en diferents parts de l'HTML.
+
+//Estils dels botons.
+
+%boto-compartir{
+    display: inline-block;
+    padding: 1rem 2rem;
+    transition: all 1s;
+    border: none;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+
+
+.boto{
+    &-main{
+        @extend %boto-compartir;
+        color: gray;
+        background-color: $main-color;
+    }
+
+    &-light{
+        @extend %boto-compartir;
+        color: #333;
+        background-color: $light-color;
+    }
+
+    &-dark{
+        @extend %boto-compartir;
+        color: #f4f4f4;
+        background-color: $dark-color;
+    }
+}
+
+
+
+//Ara el que faig es seleccionar amb ^= totes aquelles classes que comencen per boto-
+button[class^='boto-']:hover,
+a[class^='boto-']:hover,
+input[class^='boto-']:hover{
+    background-color: $main-color;
+}
+
+.lead{
+    font-size: 1.2rem;
+    margin-bottom: 2.2rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+//Margens interns generals (paddings) per a que tinga classes per tenir que canviar cada vegada
+
+.padding{
+    &-1{
+        padding: 1rem 0;
+    }
+
+    &-2{
+        padding: 2rem 0;
+    }
+
+    &-3{
+        padding: 3rem 0;
+    }
+
+    &-4{
+        padding: 4rem 0;
+    }
+
+    &-5{
+        padding: 5rem 0;
+    }
+
+    &-1{
+        padding: 1rem 0;
+    }
+
+}
+
+
+//Faig el mateix amb margin
+
+.margin{
+    &-1{
+        margin: 1rem 0;
+    }
+
+    &-2{
+        margin: 2rem 0;
+    }
+
+    &-3{
+        margin: 3rem 0;
+    }
+
+    &-4{
+        margin: 4rem 0;
+    }
+
+    &-5{
+        margin: 5rem 0;
+    }
+
+    &-1{
+        margin: 1rem 0;
+    }
+
+}
+
+
+
+//**********************************
+
+//Funcio clolr
+
+@function set-text-color($color){
+    //lightness es el brillo/luminositat 
+    //https://www.youtube.com/watch?v=aym7aE34gZg basat es un dels videos de youtube en que m'he basat
+    @if(lightness($color)>50){
+        @return black;
+    }
+    @else{
+        @return #fff;
+    }
+    }
+
+
+    .boto-line{
+        height: .2rem;
+        width: 8rem;
+        background-color: orange;
+        display: block;
+        margin: 0 auto 0.6rem auto;
+    }

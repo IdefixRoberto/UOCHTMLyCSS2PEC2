@@ -1,0 +1,64 @@
+#Formulari{
+    width: 50%;
+    align-content: center;
+    padding: 2rem 0;
+    margin: 0 auto;
+    background-color: lightblue;
+    border-radius: 3rem;
+    h1 {
+        text-align: center;
+      }
+      
+      form {
+        padding-top: 2rem;
+        width: 50%;
+        margin: 0 auto ;
+        font-size: 1.3rem;
+        
+        button{
+            background-color: red;
+            color: aliceblue;
+            width: 8rem;
+            height: 4rem;
+            font-family: $font-family-Comic;
+            font-size: 1.1rem;
+            border-radius: 3rem;
+            margin-left: 50%;
+            margin-right: 540%;
+            transform: translateX(-50%);
+        }
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+        
+      }
+      
+      input {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        border-radius: 5rem;
+        
+      
+        &.error { 
+          border-color: red; 
+          
+        }
+      }
+      
+      // Missatges d'error
+      .error-nombre,
+      .error-telefono,
+      .error-email {
+        color: red;
+        font-size: 0.8em;
+        display: block; // Mostrar el mensaje de error
+        
+        &:before { 
+          content: "Error: ";
+        }
+      }
+}

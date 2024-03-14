@@ -1,0 +1,129 @@
+/**
+ * Use this file to import partials.
+ * Do not include SCSS code in this file.
+ */
+
+/**
+ * Import variables
+ */
+
+@import "variables";
+@import "utility";
+
+/**
+ * Import npm dependencies
+ * see: https://v2.parceljs.org/features/module-resolution/
+ * see commented examples below
+ */
+
+// @import "some-node-module";
+// @import "@some-company/some-node-module";
+
+/**
+ * Import layouts
+ * It's a best practice to use a different partial for each page
+ */
+
+@import "layouts/home";
+@import "layouts/formulari";
+/**
+ * Do NOT include anything else in this file!
+ */
+
+
+//Configuració inicial de la web
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  background-color: $fonsPantalla;
+  font-family: $font-family-TitilliumWeb;
+  line-height: 1.6; //Per a que tingen salts de linea els textos
+}
+
+//Arregle els hipervincles
+
+a{
+  text-decoration: none;
+  color:$dark-color;
+}
+
+// configure les llistes
+
+ul{
+  list-style: none;
+}
+
+//Els titiols estaràn en majuscules
+h2,h3,h4{
+  text-transform: uppercase;
+}
+
+//Configuració del Header
+
+#header{
+  //Header Home
+  &-home{
+    background: $back-image no-repeat center right/cover;
+    height: 100vh;
+    color:  $color-secundari;
+
+        //al ser SASS puc fer la anidació aixina
+        .header-content{
+          text-align: center;
+          padding: 20%;
+      
+          h1{
+            font-size: 320%;
+            //Per a marcar la separació entre linees utilitzem line-height, aixina no s'apelotona tot
+            line-height: 3rem;
+            padding: 2rem;
+          }
+        }
+  }
+
+
+}
+
+//Configuració nav
+#main-nav{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul{
+    display: flex;
+  }
+
+  li{
+    padding: 1rem 1.3rem;;
+  }
+  a{
+    text-decoration: none;
+    color: $color-secundari;
+    text-decoration: uppercase;
+    border-bottom: 3px transparent solid;
+    transition: border-color 0.5s;
+
+    &:hover{
+      border-color: $medium-color;
+    }
+    
+  }
+}
+
+// Configuració del logo
+
+#logo{
+  width:100px;
+  height: 60px;
+}
+
+
+
+@import "mediaQuery";

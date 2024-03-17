@@ -2,10 +2,12 @@
  * Use this file to import partials.
  * Do not include SCSS code in this file.
  */
+
 /**
  * Import variables
  */
 @use "sass:color";
+
 /*
 $uoc-corporate: #000078;
 
@@ -84,17 +86,19 @@ input[class^='boto-']:hover {
   width: 8rem;
   background-color: orange;
   display: block;
-  margin: 0 auto 0.6rem auto; }
+  margin: 0 auto 0.6rem; }
 
 /**
  * Import npm dependencies
  * see: https://v2.parceljs.org/features/module-resolution/
  * see commented examples below
  */
+
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
+
 /*
 body {
   display: flex;
@@ -253,7 +257,7 @@ body {
 #home-d {
   font-family: 'Comic Neue', sans-serif;
   max-width: 80%;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 1rem;
   padding: 2rem; }
 
 #home-d h2 {
@@ -263,10 +267,10 @@ body {
 
 #home-d details {
   border: #333 solid 0.3rem;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 1rem;
   padding: 0.4rem;
   border-radius: 2rem;
-  box-shadow: 0 0 1.3rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1.3rem rgb(0 0 0 / 10%);
   transition: all 0.3s ease-in-out; }
 
 #home-d details h2 {
@@ -278,7 +282,7 @@ body {
   box-shadow: 0.2rem 0.2rem 1.2rem red; }
 
 #home-d details details:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0 15px rgb(0 0 0 / 20%); }
 
 #home-d details summary {
   padding: 1.2rem;
@@ -306,10 +310,7 @@ body {
 
 #home-e .items .item-text {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   opacity: 0;
   text-align: center;
   color: white;
@@ -493,9 +494,9 @@ body {
   font-size: 0.8em;
   display: block; }
 
-#Formulari .error-nombre:before,
-#Formulari .error-telefono:before,
-#Formulari .error-email:before {
+#Formulari .error-nombre::before,
+#Formulari .error-telefono::before,
+#Formulari .error-email::before {
   content: "Error: "; }
 
 /**
@@ -547,7 +548,6 @@ h2, h3, h4 {
   padding: 1rem 1.3rem; }
 
 #main-nav a {
-  text-decoration: none;
   color: #fff;
   text-decoration: uppercase;
   border-bottom: 3px transparent solid;
@@ -560,70 +560,89 @@ h2, h3, h4 {
   width: 100px;
   height: 60px; }
 
-@media (max-width: 800px) {
+@media (width <= 800px) {
   #header-home {
     height: 30rem; }
+
   #header-home .header-content {
     padding-top: 2.5rem;
     font-size: 1rem; }
+
   #home-a .container {
     height: 75rem; }
+
   #home-a .specials {
     grid-template-columns: repeat(2, 1fr);
     gap: 8rem 1rem; }
+
   #main-nav {
     flex-direction: column;
     align-items: center; }
+
   #main-nav ul li {
     padding: 0.6rem;
     font-size: 1rem; }
+
   #home-f {
     margin: 0;
     max-width: 0;
     max-height: 0;
     font-size: 0;
     opacity: 0; }
+
   #home-e .item-text-category {
     font-size: small;
     color: red; }
+
   #home-e .item-text-tit {
     font-size: 1.2rem; } }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   #main-nav ul {
     grid-template-columns: repeat(3, 1fr); }
+
   #main-nav ul li {
     padding: 0.6rem;
     font-size: auto; }
+
   #header .container {
     width: 1000%;
     height: 30%;
     margin: 0; }
+
   #header-home {
     border-bottom: 3px solid #ffbc00;
     background-position: 20% 30%; }
+
   #header-home .header-content {
     padding-top: 2.5rem;
     font-size: 1rem; }
+
   #header-home .header-content h1 {
     font-size: 2rem; }
+
   #header-home .header-content .boto-light {
     max-height: 0.5rem;
     max-width: auto;
     font-size: 0.7rem; }
+
   #home-a .specials, #home-b .stats, #home-c .process {
     grid-template-columns: 1fr; }
+
   #home-e .items {
     grid-template-columns: repeat(2, 1fr); }
+
   #home-f {
     margin: 0;
     max-width: 0;
     max-height: 0;
     font-size: 0;
     opacity: 0; }
+
   #home-e .item-text-category {
     font-size: 0.6rem;
     color: white; }
+
   #home-e .item-text-tit {
     font-size: 0.92rem;
     color: black; } }

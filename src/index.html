@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="ca">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -11,18 +11,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+<link rel="icon" href="/src/assets/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/src/assets/images/favicon.ico" type="image/x-icon">
 
 
    
 <title>UOC Boilerplate App Visitar San Francisco</title>
   </head>
   <body>
-    <!--Header -->
-<!--    <include src="./views/header.html"></include>-->
-<header id="header-home">
+
+<header  class="header">
   <div class="container">
-    <nav id="main-nav">
+    <nav class="header__nav">
         
         <ul>
           <li><a href="#home-a">Inici</a></li>
@@ -33,8 +33,8 @@
 
         </ul>
     </nav>
-      <div class="header-content">
-        <h1>San Francisco</h1>
+      <div class="header__content">
+        <h1 class="header__content__h1">San Francisco</h1>
         <p class="lead">
           Una ciutat per visitar
         </p>
@@ -45,31 +45,30 @@
   </div>
   
 </header>
-<!--     <include src="./views/header.html"></include>-->
-    <!-- Seccions-->
-    <!--Seccions_Seccio1-->
-  <!--  <include src="./views/seccio1.html"></include>-->
-  <section id="home-a" class="text-center padding-2">
+<main>
+  <section id="home-a" class="home-a" class="text-center padding-2">
     <div class="container">
       <h2 class="section-title">
         Llocs recomanats
       </h2>
-      <div class="boto-line">
+      <div class="boto-line"> </div>
+      <blockquote class="text-center">
+        <p>"San Francisco te un sol un defecte: es difícil anar-se'n."</p>
+        <cite>Rudyard Kipling</cite>
+      </blockquote>
 
-      </div>
-      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sunt consequuntur fuga molestiae, adipisci, eius repellendus esse itaque magni ea aliquam illum. Quidem architecto nam ab minima dolor voluptate earum.</p>
-      <div class="specials">
+      <div class="home-a__specials">
           <div>
             <img src="./assets/images/chinatown.jpg" alt="China Town" class="special-icon">
-            <h3>China Town</h3>
-            <p>
-              Visitar Chinatown a San Francisco és una experiència cultural única que et submergeix en la vibrant comunitat xinesa. Podràs gaudir de gastronomia autèntica, història fascinant i festivitats culturals. 
+            <h3 class="text-center">China Town</h3>
+            <p >
+              Visitar Chinatown a San Francisco és una experiència cultural única que et submergeix en la vibrant comunitat xinesa.  
             </p>
             
           </div>
           <div>
             <img src="./assets/images/alcatraz-ImatgeGeneral.jpg" alt="Alcatraz" class="special-icon">
-            <h3>Alcatraz</h3>
+            <h3 class="text-center">Alcatraz</h3>
             <p>
               Visiteu Alcatraz per explorar la seva història intrigant com a antiga presó federal i gaudir de les impressionants vistes de la badia de San Francisco. 
             </p>
@@ -77,53 +76,50 @@
 
           <div>
             <img src="./assets/images/Pont_Golden_Gate_Park_1.jpeg" alt="Pont Golden Gate" class="special-icon">
-            <h3>Pont Golden Gate</h3>
+            <h3 class="text-center">Golden Gate Park</h3>
             <p>
-              El Pont Golden Gate és un símbol icònic de San Francisco que et captiva amb la seva majestuositat i panoràmiques espectaculars de la ciutat i la badia.
+              El Golden Gate Park és un dels parcs urbans més grans i reconeguts de tot el món, ocupa una àrea de més de 4 km².  
             </p>
           </div>
 
           <div>
             <img src="./assets/images/Barri_Castro_PasZebra2.jpg" alt="Pont Golden Gate" class="special-icon">
-            <h3>Barri Castro</h3>
+            <h3 class="text-center">Barri Castro</h3>
             <p>
-              El Barri de Castro de San Francisco t'atreu amb la seva vibració única i acollidora, ple de cultura LGBTQ+, gastronomia deliciosa i una vida nocturna vibrant.
+              El Barri de Castro de San Francisco t'atreu amb la seva vibració única i acollidora, ple de cultura LGBTQ+ i gastronomia deliciosa.
             </p>
           </div>
-
-          
-
       </div>
     </div>
 
 
   </section>
-    <!--seccions_Seccio2-->
-      <!--  <include src="./views/seccio2.html"></include>-->
-    <section id="home-b" class="text-center padding-4">
 
+    <section id="home-b" class="home-b" class="text-center padding-4">
+        <h2 class="section-title"> Dades de San Francisco</h2>
+        <div class="boto-line"> </div>
         <div class="stats">
           <div>
-            <ul>
-              <li><i class="fa-brands fa-avianex fa-4x"></i></li>
-              <li class="stats-title">Visitants</li>
-              <li class="stats-number">+1.000.000</li>
+            <ul  class="text-center" >
+              <li  ><i class=" fa-brands fa-avianex fa-4x"></i></li>
+              <li class="stats__title">Visitants</li>
+              <li class="stats__number">+1.000.000</li>
             </ul>
           </div>
           <div>
 
             <ul>
-              <li><i class="fa-solid fa-hotel  fa-4x"></i></i></li>
-              <li class="stats-title">Hotels</li>
-              <li class="stats-number">+87.000</li>
+              <li><i class="fa-solid fa-hotel  fa-4x"></i></li>
+              <li class="stats__title">Hotels</li>
+              <li class="stats__number">+87.000</li>
             </ul>
           </div>
 
           <div>
             <ul>
-              <li><i class="fa-solid fa-coins  fa-4x"></i></i></li>
-              <li class="stats-title">Moneda</li>
-              <li class="stats-number">Dolar</li>
+              <li><i class="fa-solid fa-coins  fa-4x"></i></li>
+              <li class="stats__title">Moneda</li>
+              <li class="stats__number">Dolar</li>
             </ul>
 
           </div>
@@ -131,8 +127,8 @@
           <div>
             <ul>
               <li><i class="fa-regular fa-clock   fa-4x"></i></li>
-              <li class="stats-title">Hores de Vol</li>
-              <li class="stats-number">14</li>
+              <li class="stats__title">Hores de Vol</li>
+              <li class="stats__number">14</li>
             </ul>
 
           </div>
@@ -141,10 +137,8 @@
 
     </section>
 
-    <!--seccions_Seccio3-->
-       <!--  <include src="./views/seccio3.html"></include>-->  
-       <include src="./views/seccio3.html"></include>    
-    <section id="home-c" class="text-center padding-4">
+  
+    <section id="home-c" class="text-center padding-4 home-c ">
       <div class="container" >
           <h2 class="section-tittle">
             Descobrint la magia de San Francisco
@@ -153,10 +147,10 @@
           <p class="lead">
             San Francisco és una ciutat que enamora a primera vista. Amb el seu paisatge costaner, el Golden Gate Bridge, Alcatraz i Fisherman's Wharf són parades obligatòries. A més, l'escena esportiva i cultural, amb equips com els Warriors i els Giants, ofereixen emocionants experiències locals. Els parcs naturals propers, com Yosemite i Muir Woods, ofereixen un refugi tranquil de la vida urbana. Amb una gastronomia deliciosa i un clima agradable, San Francisco és una escapada perfecta per connectar amb la natura i gaudir de la vida urbana alhora.
           </p>
-          <div id="adsfew"  class="process">
+          <div id="adsfew"  class="home-c__process">
             <div>
-              <i class="fas fa-plane-arrival fa-3x process-icon margin-2">
-                <div class="process-step">
+              <i class="fas fa-plane-arrival fa-3x home-c__process__icon margin-2">
+                <div class="home-c__process__step">
                   2
                 </div>
                 
@@ -165,8 +159,8 @@
                 <p>A la zona de la Badia de San Francisco, hi ha dos aeroports principals: Aeroport Internacional de San Francisco i el Aeroport Internacional d'Oakland  </p>
             </div>
             <div>
-              <i class="fas fa-map-marked-alt fa-3x process-icon margin-2">
-                <div class="process-step">
+              <i class="fas fa-map-marked-alt fa-3x home-c__process__icon margin-2">
+                <div class="home-c__process__step">
                   &infin; 
                 </div>
               </i>
@@ -176,8 +170,8 @@
             </div>
 
             <div>
-              <i class="fa-solid fa-basketball fa-3x process-icon margin-2">
-                <div class="process-step">
+              <i class="fa-solid fa-basketball fa-3x home-c__process__icon margin-2">
+                <div class="home-c__process__step">
                   2
                 </div>
               </i>
@@ -187,8 +181,8 @@
             </div>       
             
             <div>
-              <i class="fa-solid fa-person-hiking fa-3x process-icon margin-2">
-                <div class="process-step">
+              <i class="fa-solid fa-person-hiking fa-3x home-c__process__icon margin-2">
+                <div class="home-c__process__step">
                   3
                 </div>
               </i>
@@ -200,9 +194,8 @@
       </div>
     </section>
 
-    <section id="home-f">
-      
-          <h2 class="section-title">Galeria d'imatges format 2</h2>
+    <section id="home-f" class="home-f"> 
+          <h2 class="section-title">Galeria d'imatges </h2>
           <div>
                   <img src="./assets/images/alcatraz-General2.jpg" alt="Alcatraz">
                 
@@ -217,116 +210,110 @@
                   <img src="./assets/images/City_Hall_Nit.jpg" alt="City_Hall_Nit">
                 
           </div>
-
-          </div>
-
-        </div>
-      </section>
     </section>
 
-    <section id="home-e">
-      <section id="work-a" class="text-center pading-3">
+    <section id="home-e" class="home-e">
+      <div  class="text-center pading-3">
         <div class="container">
-          <h2 class="section-title">Galeria d'imatges</h2>
+          <h2 class="section-title">Galeria d'imatges format 2</h2>
           <p class="lead"> Galeria d'imatges de San Francisco</p>
-          <div class="items">
+          <div class="home-e__items">
 
 
-              <div class="item">
-                <div class="item-image">
+              <div class="home-e__items__item">
+                <div class="home-e__items__item__image">
                   <img src="./assets/images/alcatraz-General2.jpg" alt="Alcatraz">
                 </div>
-                <div class="item-text">
-                  <div class="item-text-wrap">
-                    <p class="item-text-category">
+                <div class="home-e__items__item__text">
+                  <div class="home-e__items__item__text__wrap">
+                    <p class="home-e__items__item__text__category">
                       Presó històrica a San Francisco Bay
                     </p>
-                    <h2 class="item-text-tit">Alcatraz </h2>
+                    <h3 class="home-e__items__item__text__tit">Alcatraz </h3>
                   </div>
                 </div>
               </div>
 
-              <div class="item">
-                <div class="item-image">
+              <div class="home-e__items__item">
+                <div class="home-e__items__item__image">
                   <img src="./assets/images/Barri_Castro_Mural.jpg" alt="Barri Castro">
                 </div>
-                <div class="item-text">
-                  <div class="item-text-wrap">
-                    <p class="item-text-category">
+                <div class="home-e__items__item__text">
+                  <div class="home-e__items__item__text__wrap">
+                    <p class="home-e__items__item__text__category">
                       Conegut per la seva vibrància LGBTQ+ i cultura diversa
                     </p>
-                    <h2 class="item-text-tit">Barri Castro </h2>
+                    <h3 class="home-e__items__item__text__tit">Barri Castro </h3>
                   </div>
                 </div>
               </div>
 
-              <div class="item">
-                <div class="item-image">
+              <div class="home-e__items__item">
+                <div class="home-e__items__item__image">
                   <img src="./assets/images/chinatown.jpg" alt="Xina Town">
                 </div>
-                <div class="item-text">
-                  <div class="item-text-wrap">
-                    <p class="item-text-category">
+                <div class="home-e__items__item__text">
+                  <div class="home-e__items__item__text__wrap">
+                    <p class="home-e__items__item__text__category">
                       Una experiència vibrant amb autèntica cuina, mercats i cultura xinesa.
                     </p>
-                    <h2 class="item-text-tit">Xina Town </h2>
+                    <h3 class="home-e__items__item__text__tit">Xina Town </h3>
                   </div>
                 </div>
               </div>
 
-              <div class="item">
-                <div class="item-image">
+              <div class="home-e__items__item">
+                <div class="home-e__items__item__image">
                   <img src="./assets/images/Haight-Ashbury_General.jpg" alt="Haight-Ashbury">
                 </div>
-                <div class="item-text">
-                  <div class="item-text-wrap">
-                    <p class="item-text-category">
-                      Lloc emblemàtic de la contracultura, plè de botigues vintage, murals i atmosfera bohèmia.
+                <div class="home-e__items__item__text">
+                  <div class="home-e__items__item__text__wrap">
+                    <p class="home-e__items__item__text__category">
+                      Lloc emblemàtic de la contracultura i atmosfera bohèmia.
                     </p>
-                    <h2 class="item-text-tit">Haight Ashbury </h2>
+                    <h3 class="home-e__items__item__text__tit">Haight Ashbury </h3>
                   </div>
                 </div>
               </div>
 
-              <div class="item">
-                <div class="item-image">
+              <div class="home-e__items__item">
+                <div class="home-e__items__item__image">
                   <img src="./assets/images/PontGoldenGate1.jpg" alt="PontGoldenGate">
                 </div>
-                <div class="item-text">
-                  <div class="item-text-wrap">
-                    <p class="item-text-category">
-                      Pont majestuós sm vistes panoràmiques úniques
+                <div class="home-e__items__item__text">
+                  <div class="home-e__items__item__text__wrap">
+                    <p class="home-e__items__item__text__category">
+                      Pont majestuós amb vistes panoràmiques úniques
                     </p>
-                    <h2 class="item-text-tit">Pont Golden Gate </h2>
+                    <h3 class="home-e__items__item__text__tit">Golden Gate </h3>
                   </div>
                 </div>
               </div>
  
-              <div class="item">
-                <div class="item-image">
+              <div class="home-e__items__item">
+                <div class="home-e__items__item__image">
                   <img src="./assets/images/City_Hall_Nit.jpg" alt="City_Hall_Nit">
                 </div>
-                <div class="item-text">
-                  <div class="item-text-wrap">
-                    <p class="item-text-category">
+                <div class="home-e__items__item__text">
+                  <div class="home-e__items__item__text__wrap">
+                    <p class="home-e__items__item__text__category">
                       City Hall a la nit:  imatge icònica de San Francisco.
                     </p>
-                    <h2 class="item-text-tit">City Hall</h2>
+                    <h3 class="home-e__items__item__text__tit">City Hall</h3>
                   </div>
                 </div>
               </div>
 
-
           </div>
 
         </div>
-      </section>
+      </div>
     </section>
 
 
 
 
-    <section id="home-d">
+    <section id="home-d" class="home-d">
       <h2>Preguntes frequents</h2>
     
       <details>
@@ -365,43 +352,66 @@
       </details>
     </section>
 
-    <div id="Formulari">
-    <h1>Formulari de contacte</h1>
-    <form action="#">
-      <label for="nombre">Nom:</label>
-      <input type="text" id="nom" name="nom" required>
-      <p class="error-nom"></p>
+
+
+    
+    <section id="home-g" class="home-g " >   
+      <div id="Formulari">
+        <h2>Formulari de contacte</h2>
+        <form id="contact-form" class="home-g__form">
+          <label for="nom">Nom:</label>
+          <div class="home-g__form__container">
+          <i class=" fa-solid fa-user"></i>
+          <input type="text" id="nom" name="nom" class="home-g__form__container__field" placeholder="Nom" required>
+          </div>         
+          <p id="error-nom" class=""></p>
+
+
   
-      <label for="telefon">Teléfon:</label>
-      <input type="tel" id="telefon" name="telefon" required>
-      <p class="error-telefon"></p>
+          <label for="telefon">Telèfon:</label>
+          <div class="home-g__form__container">
+          <i class=" fa-solid fa-phone"></i> 
+          <input type="tel" id="telefon" name="telefon" class="home-g__form__container__field" placeholder="6XXXXXXXX" required>
+          </div>
+          <p  id="error-telefon" class="" ></p>
   
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <p class="error-email"></p>
-  
-      <button type="submit" disabled>Enviar</button>
-    </form>
-  </div>
-
-
-    <footer id="main-footer">
-      <div class="footer-content container">
-        <div id="copy">
-          <img src="./assets/images/logo.png" alt="logo UOC">
-          <p> Copyright &copy; 2024 Salvador Peiró Palmer
-        </p>
-        </div>
-        <div class="social">
-
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-x-twitter"></i>
-
-        </div>
+          <label for="email">Email:</label>
+          <div class="home-g__form__container">
+          <i class=" fa-solid fa-envelope"></i>
+          <input type="email" id="email" name="email" class="  home-g__form__container__field" placeholder="exemple@exemple.com" required>
+          </div>
+          <p id="error-email" class="" ></p>
+       
+          <button type="button" id="submit-btn" class="button" disabled>Enviar</button>
+        
+          <p id="form-Wiew" class="Noopacity">Les seues dades han estat registrades de forma correcta</p>
+        </form>
       </div>
-  </footer>
+    </section>
+    
 
+</main>
+<footer class="footer">
+  <div class="footer__content container">
+    <div class="footer__content__copy">
+      <ul>
+        <li>Copyright &copy; 2024 Salvador Peiró Palmer</li>
+        <li>Assignatura:  Eines HTML i CSS II </li>
+        <li>PEC1</li>
+      </ul>
+      
+        <div></div>
+    
+    </div>
+    <div class="social">
+
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-x-twitter"></i>
+
+    </div>
+  </div>
+</footer>
 
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>

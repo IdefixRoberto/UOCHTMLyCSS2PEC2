@@ -1,0 +1,56 @@
+//Configuració del Header
+
+.header{
+    font-family: $font-family-Comic;
+    background: $back-image no-repeat center right/cover;
+    height: 100vh;
+    color:  $color-secundari;
+
+        //al ser SASS puc fer la anidació aixina
+        &__content{
+          text-align: center;
+          padding: 20%;
+          
+          &__h1{
+            font-size: 4rem;
+            //Per a marcar la separació entre linees utilitzem line-height, aixina no s'apelotona tot
+            line-height: 5rem;
+          }
+        }
+
+        &__nav{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1rem;
+          
+            ul{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0 auto;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+          
+            li{
+              padding: 1rem 1.3rem;;
+            }
+            a{
+              text-decoration: none;
+              color: $color-secundari;
+              text-decoration: uppercase;
+              border-bottom: 3px transparent solid;
+              transition: border-color 0.5s;
+          
+              &:hover{
+                border-color: $medium-color;
+              }
+              
+            }
+          }
+  }
+  
+  //Configuració nav
+ 
+
+

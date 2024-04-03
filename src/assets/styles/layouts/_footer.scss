@@ -1,0 +1,48 @@
+//footer1
+.footer{
+    flex-direction: column;
+    justify-content: space-around;
+
+    background: $dark-color;
+    color: white;
+    margin-top: 5%;
+
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    &__content{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 2rem;
+      align-items: center;
+    &__copy{
+      display: flex;
+      flex-direction: row;
+        
+      img{
+        max-width: 5rem;
+        max-height: 5rem;
+        margin-right: 3rem;
+        background: white;
+      }
+    }
+      .social{
+        
+        .fab{
+        margin-right: 1rem;
+        border: 0.1rem solid white;
+        border-radius: 50%;
+        line-height: 20px;
+        text-align: center;
+        padding: 0.5rem;
+  
+        &:hover{
+          background-color: lightseagreen;
+        }
+        }
+  
+    }
+      
+    }
+    
+  }

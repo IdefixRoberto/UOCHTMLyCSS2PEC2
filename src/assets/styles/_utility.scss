@@ -118,7 +118,6 @@ input[class^='boto-']:hover{
 
 @function set-text-color($color){
     //lightness es el brillo/luminositat 
-    //https://www.youtube.com/watch?v=aym7aE34gZg basat es un dels videos de youtube en que m'he basat
     @if(lightness($color)>50){
         @return black;
     }
@@ -133,5 +132,6 @@ input[class^='boto-']:hover{
         width: 8rem;
         background-color: orange;
         display: block;
-        margin: 0 auto 0.6rem auto;
+        margin: 0 auto 2rem auto;
     }
+

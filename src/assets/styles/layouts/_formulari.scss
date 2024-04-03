@@ -1,64 +1,123 @@
-#Formulari{
-    width: 50%;
-    align-content: center;
-    padding: 2rem 0;
-    margin: 0 auto;
-    background-color: lightblue;
-    border-radius: 3rem;
-    h1 {
-        text-align: center;
-      }
-      
-      form {
-        padding-top: 2rem;
-        width: 50%;
-        margin: 0 auto ;
-        font-size: 1.3rem;
-        
-        button{
-            background-color: red;
-            color: aliceblue;
-            width: 8rem;
-            height: 4rem;
-            font-family: $font-family-Comic;
-            font-size: 1.1rem;
-            border-radius: 3rem;
-            margin-left: 50%;
-            margin-right: 540%;
-            transform: translateX(-50%);
-        }
-      }
-      
-      label {
-        display: block;
-        margin-bottom: 5px;
-        
-      }
-      
-      input {
-        width: 100%;
-        padding: 5px;
-        border: 1px solid #ccc;
-        margin-bottom: 10px;
-        border-radius: 5rem;
-        
-      
-        &.error { 
-          border-color: red; 
-          
-        }
-      }
-      
-      // Missatges d'error
-      .error-nombre,
-      .error-telefono,
-      .error-email {
-        color: red;
-        font-size: 0.8em;
-        display: block; // Mostrar el mensaje de error
-        
-        &:before { 
-          content: "Error: ";
-        }
-      }
+//Funció per evitar el error
+
+
+
+.home-g__form {
+  display: flex;
+  flex-direction: column;
+  width: 30vh;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 2px solid #ccccccf6;
+  border-radius: 3%;
+  background-color: whitesmoke;
+
+.Noopacity{
+  opacity: 0;
+  height: 0;
+  width: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.opacity{
+  margin-top: 1rem;
+  height: auto;
+  width: auto;
+  opacity: 1;
+  color: #007bff;
+  border: .1rem solid lightblue;
+}
+
+  &__container{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 5.5% 0;
+
+    label {
+      font-size: 1rem;
+      font-weight: bolder;
+      font-family: $font-family-Comic;
+  }
+    i{
+      border: solid 1px gray;
+      margin: auto;
+      background-color: #ccc;
+      text-align: center;
+      justify-content: center;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+
+    input{
+      margin-left: 10%;
+      border-radius: 0.5rem;
+      max-width: 700%;
+    }
+
+    input:focus {
+      outline: none;
+      border: solid 2px blue
+  }
+
+  }
+
+
+  &__field {
+      margin-bottom: 1.1rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      transition: border-color 0.3s ease;
+
+
+  }
+
+  .error {
+      padding: 1.5%;
+      font-size: 1rem;
+      font-family:'Times New Roman', Times, serif;
+      color: tomato;
+      font-weight: 200;
+  }
+
+  
+  .errorInput {
+
+      border-color: tomato;
+
+  }
+
+  .button {
+    background-color: #007bff; // Color de fondo predeterminado
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 5%;
+    width: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+  
+    // Estilo cuando está deshabilitado
+    &:disabled {
+      background-color: #ccc; // Color gris cuando está deshabilitado
+      cursor: not-allowed;
+    }
+  
+    // Cambio de color al pasar el mouse
+    &:hover:not(:disabled) {
+      background-color: #0056b3; // Color más oscuro al pasar el mouse
+    }
+  }
+}
+
+.dissableForm{
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: relative;
 }

@@ -370,7 +370,8 @@ input[class^='boto-']:hover {
 .home-g .home-g__form {
   display: flex;
   flex-direction: column;
-  width: 30vh;
+  width: 20%;
+  min-width: 275px;
   margin: 0 auto;
   padding: 2rem;
   border: 2px solid #ccccccf6;
@@ -496,7 +497,8 @@ input[class^='boto-']:hover {
 .home-g__form {
   display: flex;
   flex-direction: column;
-  width: 30vh;
+  width: 20%;
+  min-width: 275px;
   margin: 0 auto;
   padding: 2rem;
   border: 2px solid #ccccccf6;
@@ -591,20 +593,21 @@ input[class^='boto-']:hover {
   position: relative; }
 
 .footer {
-  flex-direction: column;
-  justify-content: space-around;
   background: #333;
   color: white;
   margin-top: 5%;
-  justify-content: center;
-  top: 0;
-  bottom: 0; }
+  top: 0; }
 
 .footer__content {
   display: flex;
   justify-content: space-between;
-  padding-top: 2rem;
-  align-items: center; }
+  padding: 4rem 0;
+  margin: 0 10vh; }
+
+@media (max-width: 600px) {
+  .footer__content {
+    display: grid;
+    grid-template-columns: 1fr; } }
 
 .footer__content__copy {
   display: flex;
@@ -615,6 +618,16 @@ input[class^='boto-']:hover {
   max-height: 5rem;
   margin-right: 3rem;
   background: white; }
+
+@media (max-width: 600px) {
+  .footer__content .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center; }
+  .footer__content .social .fab {
+    margin-bottom: 20px; } }
 
 .footer__content .social .fab {
   margin-right: 1rem;

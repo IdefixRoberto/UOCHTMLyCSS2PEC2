@@ -1,20 +1,22 @@
 //footer1
 .footer{
-    flex-direction: column;
-    justify-content: space-around;
-
     background: $dark-color;
     color: white;
     margin-top: 5%;
-
-    justify-content: center;
+    
+    
     top: 0;
-    bottom: 0;
     &__content{
       display: flex;
       justify-content: space-between;
-      padding-top: 2rem;
-      align-items: center;
+      padding: 4rem 0;
+      margin: 0 10vh;
+      @media (max-width: $phone) {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+
     &__copy{
       display: flex;
       flex-direction: row;
@@ -27,7 +29,17 @@
       }
     }
       .social{
-        
+        @media (max-width: $phone) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          
+          .fab{
+            margin-bottom: 20px;
+          }
+        }
         .fab{
         margin-right: 1rem;
         border: 0.1rem solid white;

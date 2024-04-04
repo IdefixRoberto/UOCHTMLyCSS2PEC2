@@ -2,39 +2,35 @@
   {
     "extends": [
       "stylelint-config-recommended-scss",
-      "stylelint-config-recess-order",
-      "stylelint-config-standard"
+      "stylelint-config-recess-order"
+
     ],
   
     "plugins": [
       "stylelint-scss"
-    ],
-  
+    ], 
+
     "rules": {
+
       "indentation": 3,  
       "no-empty-source": true, 
       "at-rule-no-unknown": true, 
       "declaration-no-important": true,
-      "color-hex-length": "long", 
       "color-no-invalid-hex": true, 
-      "color-named": "never", 
-      "comment-empty-line-before": "always", 
-      "comment-no-empty": true, 
-      "max-line-length": 100, "no-duplicate-selectors": true, 
-      "selector-max-compound-selectors": 4, "property-no-unknown": true, 
-      "property-sort-order": "alphabetical", 
-      "unit-allowed-list": ["px", "%", "rem", "em"], 
-      "at-rule-empty-line-before": "always", 
-      "declaration-block-no-duplicate-properties": true, 
       "font-family-no-duplicate-names": true, 
       "media-feature-name-no-vendor-prefix": true, 
-      "no-descending-specificity": true, 
-      "string-quotes": "single", 
-      
-      "scss/at-rule-no-unknown": true, 
-      "scss/at-import-no-partial-leading-underscore": true, 
-      "scss/at-import-partial-extension-blacklist": ["scss"], 
+      "property-no-unknown": true, 
+      "property-sort-order": "alphabetical", 
+      "max-line-length": 100,  
+      "selector-max-compound-selectors": 4, 
+      "declaration-block-no-duplicate-properties": true, 
+      "color-named": "never", 
+      "scss/selector-no-redundant-nesting-selector": true, 
       "scss/dollar-variable-pattern": "^[_]?[a-z]+([a-z0-9-]*[a-z0-9]+)?$", 
-      "scss/selector-no-redundant-nesting-selector": true
+      "comment-no-empty": true,       
+      "scss/at-import-partial-extension-blacklist": ["scss"], 
+      "no-duplicate-selectors": true,
+      "scss/at-import-no-partial-leading-underscore": true
     }
+    
   }

@@ -1,56 +1,53 @@
-//Configuració del Header
+// Configuració del Header
+.header {
+  font-family: $font-family-Comic; // Utilitza una variable SCSS per a la tipografia
+  background: $back-image no-repeat center right/cover; // Imatge de fons
+  height: 100vh; // Ocupa tota l'alçada de la pantalla 
+  color: $color-secundari;
 
-.header{
-    font-family: $font-family-Comic;
-    background: $back-image no-repeat center right/cover;
-    height: 100vh;
-    color:  $color-secundari;
+  &__content { // Contenidor per al contingut de l'encapçalament
+    text-align: center;
+    padding: 20%; 
 
-        //al ser SASS puc fer la anidació aixina
-        &__content{
-          text-align: center;
-          padding: 20%;
-          
-          &__h1{
-            font-size: 4rem;
-            //Per a marcar la separació entre linees utilitzem line-height, aixina no s'apelotona tot
-            line-height: 5rem;
-          }
-        }
-
-        &__nav{
-            display: flex;
-            justify-content: space-between;
-            padding-top: 1rem;
-          
-            ul{
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                padding: 0 auto;
-                font-size: 1.5rem;
-                font-weight: bold;
-            }
-          
-            li{
-              padding: 1rem 1.3rem;;
-            }
-            a{
-              text-decoration: none;
-              color: $color-secundari;
-              text-decoration: uppercase;
-              border-bottom: 3px transparent solid;
-              transition: border-color 0.5s;
-          
-              &:hover{
-                border-color: $medium-color;
-              }
-              
-            }
-          }
+    &__h1 { // Estil per al títol principal (H1)
+      font-size: 4rem; 
+      line-height: 5rem; // Increment per a una millor llegibilitat
+    }
   }
+
+  &__nav { // Menú de navegació
+    display: flex;
+    justify-content: space-between; // Espais iguals entre elements
+    padding-top: 1rem;
+
+    ul { // Llista no ordenada de navegació
+      display: flex;
+      justify-content: space-between; 
+      width: 100%; 
+      padding: 0 auto;
+      font-size: 1.5rem;
+      font-weight: bold; 
+    }
+
+    li { // Elements de llista individials 
+      padding: 1rem 1.3rem;
+    }
+
+    a { // Estil per als enllaços
+      text-decoration: none; 
+      color: $color-secundari; 
+      text-decoration: uppercase; // Text en majúscules
+      border-bottom: 3px transparent solid; // Ressaltat transparent inicial
+      transition: border-color 0.5s; // Transició suau del ressaltat 
+
+      &:hover { // Estils al passar el ratolí sobre l'enllaç
+        border-color: $medium-color; 
+      }
+    }
+  }
+}
   
-  //Configuració nav
+
  
 
 

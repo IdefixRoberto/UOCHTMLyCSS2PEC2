@@ -16,19 +16,19 @@
 .boto{
     &-main{
         @extend %boto-compartir;
-        color: gray;
+        color: $gray;
         background-color: $main-color;
     }
 
     &-light{
         @extend %boto-compartir;
-        color: #333;
+        color: $dark-color;
         background-color: $light-color;
     }
 
     &-dark{
         @extend %boto-compartir;
-        color: #f4f4f4;
+        color: $light-color;
         background-color: $dark-color;
     }
 }
@@ -74,10 +74,6 @@ input[class^='boto-']:hover{
         padding: 5rem 0;
     }
 
-    &-1{
-        padding: 1rem 0;
-    }
-
 }
 
 
@@ -104,9 +100,7 @@ input[class^='boto-']:hover{
         margin: 5rem 0;
     }
 
-    &-1{
-        margin: 1rem 0;
-    }
+
 
 }
 
@@ -119,10 +113,10 @@ input[class^='boto-']:hover{
 @function set-text-color($color){
     //lightness es el brillo/luminositat 
     @if(lightness($color)>50){
-        @return black;
+        @return $dark-color;
     }
     @else{
-        @return #fff;
+        @return $color-secundari;
     }
     }
 
@@ -130,7 +124,7 @@ input[class^='boto-']:hover{
     .boto-line{
         height: .2rem;
         width: 8rem;
-        background-color: orange;
+        background-color: $orange;
         display: block;
         margin: 0 auto 2rem auto;
     }

@@ -1,60 +1,58 @@
 //footer1
-.footer{
-    background: $dark-color;
-    color: white;
-    margin-top: 5%;
-    
-    
-    top: 0;
-    &__content{
-      display: flex;
-      justify-content: space-between;
-      padding: 4rem 0;
-      margin: 0 10vh;
-      @media (max-width: $phone) {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
+.footer {
+  background: $dark-color; // Utilitza una variable SCSS per al color de fons
+  color: $color-secundari; // Color del text
+  margin-top: 5%; 
+  top: 0; // Aquesta propietat pot estar sobreescribint estils no desitjats 
 
+  &__content {
+    display: flex;
+    justify-content: space-between; // Justifica els elements amb espai entre
+    padding: 4rem 0;
+    margin: 0 10vh;
 
-    &__copy{
-      display: flex;
-      flex-direction: row;
-        
-      img{
-        max-width: 5rem;
-        max-height: 5rem;
-        margin-right: 3rem;
-        background: white;
-      }
+    @media (max-width: $phone) {  // Breakpoint per a dispositius mòbils
+      display: grid;
+      grid-template-columns: 1fr; // Una sola columna a mòbils
     }
-      .social{
-        @media (max-width: $phone) {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-align: center;
-          align-items: center;
-          
-          .fab{
-            margin-bottom: 20px;
-          }
-        }
-        .fab{
-        margin-right: 1rem;
-        border: 0.1rem solid white;
-        border-radius: 50%;
-        line-height: 20px;
-        text-align: center;
-        padding: 0.5rem;
-  
-        &:hover{
-          background-color: lightseagreen;
-        }
-        }
-  
-    }
-      
-    }
-    
   }
+
+  &__copy { 
+    display: flex;
+    flex-direction: row;  // Alinea els elements en una fila
+
+    img {
+      max-width: 15rem; 
+      max-height: 15rem;
+      margin-right: 6rem; // Espai a la dreta de la imatge
+      background: $color-secundari;  
+    }
+  }
+
+  .social { // Classe per a les icones de xarxes socials
+    @media (max-width: $phone) {
+      display: flex;
+      flex-direction: column; // Alineació vertical a mòbils
+      justify-content: center;
+      text-align: center;
+      align-items: center; 
+
+      .fab {
+        margin-bottom: 20px; 
+      }
+    }
+
+    .fab {
+      margin-right: 1rem; 
+      border: 0.1rem solid $dark-color;  
+      border-radius: 50%; 
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background-color: #20B2AA; 
+      }
+    }
+  } 
+} 

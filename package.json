@@ -10,7 +10,8 @@
     "start": "npm run dev",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean parcel:build",
-    "sass": "node-sass -w src/assets/styles -o src/assets/styles --recursive",
+    "sass": "node-sass -w src/assets/styles -o src/assets/styles --recursive && stylelint 'src/assets/styles/**/*.scss' --fix",
+    "lint:styles": "stylelint 'src/assets/styles/**/*.scss' --fix",
     "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
   },
   "web": "dist/index.html",
@@ -47,7 +48,10 @@
     "rimraf": "^5.0.1",
     "sharp": "^0.31.1",
     "stylelint": "^16.2.1",
+    "stylelint-config-recess-order": "^5.0.0",
+    "stylelint-config-recommended-scss": "^14.0.0",
     "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.4",
     "stylelint-webpack-plugin": "^5.0.0"
   },
   "dependencies": {

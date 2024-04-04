@@ -15,7 +15,6 @@
       "no-empty-source": true, 
       "at-rule-no-unknown": true, 
       "declaration-no-important": true,
-      "color-hex-length": "long", 
       "color-no-invalid-hex": true, 
       "color-named": "never", 
       "comment-empty-line-before": "always", 

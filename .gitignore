@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Created by https://www.toptal.com/developers/gitignore/api/git,sass,node,macos,linux,windows,vscode,sublimetext
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,sass,node,macos,linux,windows,vscode,sublimetext
@@ -176,10 +177,13 @@ dist
 .vscode-test
 
 ### Sass ###
+=======
+>>>>>>> f08e59702adaa041594b7e64f241a6d4929ea323
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
+<<<<<<< HEAD
 
 ### SublimeText ###
 # Cache files for Sublime Text
@@ -251,3 +255,5 @@ $RECYCLE.BIN/
 
 ### UOC Boilerplate ###
 dist
+=======
+>>>>>>> f08e59702adaa041594b7e64f241a6d4929ea323

@@ -1,0 +1,47 @@
+//Personalització Components Boostrap
+
+/****** Personalització Breadcrum*/
+
+.breadcrumb {
+    background-color: #f8f9fa; /* Color de fons més clar */
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Obtenir una ombra més suau */
+    font-family: 'Playfair Display', serif; /* Li done una font diferent*/
+}
+
+.breadcrumb a {
+    color: $bluelight; /* Color  blau per als enllaços */
+    text-decoration: none; /* Elimina la decoració, tot i que per defecte ja ho tinc eliminat */
+}
+
+.breadcrumb a:hover {
+    color: $blue; /* Color blaus oscur */
+    text-decoration: underline; /* Per a personalitzar he afegit una ratll al borde inferior */
+}
+
+
+/*Personalització del Modal*/
+
+.modal-content {
+    border: 1px solid #dee2e6; /* Li he donat un borde més definit */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Li done una ombra més definida */
+}
+
+.modal-header {
+    background-color: $gray; /* Color gris oscur per a la capçalera */
+    color: $white; /* I el text de la capçalera es blanc */
+}
+
+.modal-body {
+    background-color: $light-color; /* Fons de color clar */
+}
+
+.modal-footer .btn-success {
+    background-color: $green /* Li done un verd */
+    border-color: $green; /* Li done el mateix verd */
+}
+
+.modal-footer .btn-success:hover {
+    background-color: #36882162; /* Li done una tonalitat de verd diferent */
+    border-color:  #00235262; /* El borde d'un color diferent */
+}

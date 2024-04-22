@@ -1,0 +1,177 @@
+/*
+
+.cuiners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  width: 70%;
+  margin: 10vh auto; 
+  position: relative;
+
+  @media (max-width: $tablet) {
+    justify-content: space-around; 
+  }
+
+  @media (max-width: $phone) {
+    flex-direction: column;
+    align-items: center; // 
+  }
+
+  &__concursant {
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    padding: 2.5vh;
+    margin-bottom: 20px;
+    width: calc(33.333% - 4%); // Extrac el marge dels elements
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $tablet) {
+      width: calc(50% - 4%); // 2 elements per fila i elimine el marge
+      padding: 5vh;
+    }
+
+    @media (max-width: $phone) {
+      width: 100%; // Un sol element per fila a telèfons
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #ff6347;
+    }
+
+    &__imagen {
+      width: 100%;
+      max-height: 300px;
+      margin-bottom: 5%;
+    }
+
+    &__contingut {
+      
+
+      &__nom, &__descripcio, &__texto {
+        margin-bottom: 2.5%;
+      }
+    }
+
+    &__stars {
+      display: inline-block;
+      color: #ccc;
+      margin: 5% 2%;
+
+      i {
+        cursor: pointer;
+        
+        &:hover,
+        &:hover ~ i {
+          color: gold;
+        }
+      }
+    }
+  }
+}
+*/
+
+/* Codi Cuiners*/
+
+.cuiners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  width: 70%;
+  margin: 10vh auto; 
+  position: relative;
+
+  // Media Queries como Fallback
+  @media (max-width: $tablet) {
+    justify-content: space-around;
+  }
+
+  @media (max-width: $phone) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // Container Queries si son soportados
+  @supports (container-type: inline-size) {
+    container-type: inline-size;
+
+    @container (max-width: 768px) { 
+      justify-content: space-around;
+    }
+
+    @container (max-width: 480px) { 
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__concursant {
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    padding: 2.5vh;
+    margin-bottom: 20px;
+    width: calc(33.333% - 4%); // Restamos el margen entre elementos
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+      width: calc(50% - 4%); // 2 elementos por fila en tablets
+      padding: 5vh;
+    }
+
+    @media (max-width: $phone) {
+      width: 100%; // Un solo elemento por fila en teléfonos
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #ff6347;
+    }
+
+    &__imagen {
+      width: 100%;
+      max-height: 300px;
+      margin-bottom: 5%;
+    }
+
+    &__contingut {
+      &__nom, &__descripcio, &__texto {
+        margin-bottom: 2.5%;
+      }
+    }
+
+    &__stars {
+      display: inline-block;
+      color: #ccc;
+      margin: 5% 2%;
+      
+      i {
+        cursor: pointer;
+        &:hover, &:hover ~ i {
+          color: gold;
+        }
+      }
+    }
+  }
+}
+
+//Per a que funcione el js
+
+.cuiners__concursant__stars i {
+  cursor: pointer;
+  color: #ccc; // color por defecto de las estrellas
+  transition: color 0.2s;
+
+  &.selected, &.clicked {
+      color: gold; // color de estrella seleccionada
+  }
+
+  &:hover,
+  &:hover ~ i {
+      color: gold;
+  }
+}

@@ -25,11 +25,15 @@
  */
 @import "layouts/header";
 @import "layouts/home";
-@import "layouts/formulari";
 @import "layouts/footer";
+@import "layouts/cuiners";
+@import "layouts/historia";
+@import "layouts/vallGallinera.scss";
 /**
  * Do NOT include anything else in this file!
  */
+ 
+@import "bootstrap/scss/bootstrap";
 
 
 //Configuració inicial de la web
@@ -41,15 +45,25 @@
   
 }
 
-
+h1{
+  font-size: 3rem;
+  &:hover{
+    color:$orange;
+    transform: scale(120%);
+  }
+}
 body {
   display: relative;
   flex-direction: column;
   min-height: 100vh;
   background-color: $fonsPantalla;
   font-family: $font-family-TitilliumWeb;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6; //Per a que tingen salts de linea els textos
+}
+
+main {
+  flex: 1; 
 }
 
 //Arregle els hipervincles
@@ -67,7 +81,11 @@ ul{
 
 //Els titiols estaràn en majuscules
 h2,h3,h4{
-  text-transform: uppercase;
+  font-size: 2rem;
+  &:hover{
+    color:$green;
+    transform: scale(105%);
+  }
 }
 
 
@@ -81,4 +99,3 @@ h2,h3,h4{
 
 
 
-@import "mediaQuery";

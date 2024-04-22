@@ -12,26 +12,10 @@
 }
 
 
-
-.boto{
-    &-main{
-        @extend %boto-compartir;
-        color: $gray;
-        background-color: $main-color;
-    }
-
-    &-light{
-        @extend %boto-compartir;
-        color: $dark-color;
-        background-color: $light-color;
-    }
-
-    &-dark{
-        @extend %boto-compartir;
-        color: $light-color;
-        background-color: $dark-color;
-    }
+.marginBootom-2{
+  margin-bottom: 20px;
 }
+
 
 
 
@@ -47,62 +31,20 @@ input[class^='boto-']:hover{
     margin-bottom: 2.2rem;
 }
 
-.text-center{
+
+.x3center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-//Margens interns generals (paddings) per a que tinga classes per tenir que canviar cada vegada
-
-.padding{
-    &-1{
-        padding: 1rem 0;
-    }
-
-    &-2{
-        padding: 2rem 0;
-    }
-
-    &-3{
-        padding: 3rem 0;
-    }
-
-    &-4{
-        padding: 4rem 0;
-    }
-
-    &-5{
-        padding: 5rem 0;
-    }
-
+.scale110{
+    transform: scale(110%);
 }
 
 
-//Faig el mateix amb margin
-
-.margin{
-    &-1{
-        margin: 1rem 0;
-    }
-
-    &-2{
-        margin: 2rem 0;
-    }
-
-    &-3{
-        margin: 3rem 0;
-    }
-
-    &-4{
-        margin: 4rem 0;
-    }
-
-    &-5{
-        margin: 5rem 0;
-    }
-
-
-
-}
 
 
 
@@ -129,4 +71,181 @@ input[class^='boto-']:hover{
         margin: 0 auto 2rem auto;
     }
 
+    .tiktok{
+        opacity: 0.7;
+        color: #000000; 
+        &:hover{
+          transform: scale(110%);
+          background-color: $graylight;
+          opacity: 1;
+          padding: 2vh;
+        }
+      }
+      .instagram{
+        opacity: 0.7;
+        color: #C13584;
+        &:hover{
+          transform: scale(110%);
+          background-color: $graylight;
+          opacity: 1;
+          padding: 0.5vh;
+        }
+      }
+
+      .youtube{ 
+        opacity: 0.7;
+        color: #FF0000;
+        &:hover{
+          transform: scale(110%);
+          background-color: $graylight;
+          opacity: 1;
+          padding: 0.5vh;
+        }
+      }
+
+      .discord{ 
+        opacity: 0.7;
+        color: #7289DA;
+        &:hover{
+          transform: scale(110%);
+          background-color: $graylight;
+          opacity: 1;
+          padding: 0.5vh;
+        }
+      }
+      .wikipedia{
+        opacity: 0.7;
+        &:hover{
+          transform: scale(110%);
+          background-color: $graylight;
+          opacity: 1;
+          padding: 0.5vh;
+        }
+      }
+
+      
+    @keyframes animacioText {
+      0%{
+        opacity: 0;
+      }
+      10%{
+        opacity: 0.1;
+      }
+      20%{
+        opacity: 0.2;
+      }
+      30%{
+        opacity: 0.3;
+      }
+      40%{
+        opacity: 0.4;
+      }
+      50%{
+        opacity: 0.5;
+      }
+      60%{
+        opacity: 0.6;
+      }
+      70%{
+        opacity: 0.7;
+      }
+      80%{
+        opacity: 0.8;
+      }
+      90%{
+        opacity: 0.9;
+      }
+      100%{
+        opacity: 0;
+      }
+    }
+
+    @keyframes animacioArcoiris {
+      0% { color: red; }
+      16.67% { color: orange; } /* 1/6 de l'arc de San Marti */
+      33.33% { color: yellow; } /* 2/6 de l'arc de San Marti */
+      50% { color: green; } /* 3/6 de l'arc de San Marti */
+      66.67% { color: blue; } /* 4/6 de l'arc de San Marti */
+      83.33% { color: indigo; } /* 5/6 de l'arc de San Marti */
+      100% { color: violet; } /* 6/6 de l'arc de San Marti */
+    }
+
+
+      @keyframes moveVertical {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(200%); }
+      }
+
+      @keyframes gamaGris {
+        0% { color:  #0c0c0c; }
+        16.67% { color:  #ff0000de; } 
+        33.33% { color:  #0109ffde; } 
+        50% { color:  #7c0101de; } 
+        66.67% { color:  hsl(0, 100%, 18%); } 
+        83.33% { color:  #0442d4} 
+        100% { color:  #6e0189 } 
+      }
+
+      @keyframes moveX {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%); 
+        }
+      }
+
+      .displayBlock{
+        display: block;
+      }
+
+      .font1{
+        font-size: 1rem;
+      }
+      @mixin apply-hover-color($class) {
+        @if $class == 'index-link' {
+          color: $blue;
+        } @else if $class == 'cuiners-link' {
+          color: $red;
+        } @else if $class == 'historia-link' {
+          color: $green;
+        } @else if $class == 'vallgallinera-link' {
+          color: $cirera;
+        }
+      }
+         
+    .index-link:hover {
+        font-family: $font-family-Comic;
+        @include apply-hover-color('index-link');
+        transform: scale(110%);
+        border-bottom:  3px dotted currentColor;
+      }
+      .cuiners-link:hover {
+        font-family: $font-family-Comic;
+        @include apply-hover-color('cuiners-link');
+        transform: scale(110%);
+        border-bottom:  3px dotted currentColor;
+      }
+      .historia-link:hover {
+        font-family: $font-family-Comic;
+        @include apply-hover-color('historia-link');
+        transform: scale(110%);
+        border-bottom:  3px dotted currentColor;
+      }
+      .vallgallinera-link:hover {
+        font-family: $font-family-Comic;
+        @include apply-hover-color('vallgallinera-link');
+        transform: scale(110%);
+        border-bottom:  3px dotted currentColor;
+      }
+
+
+      // utilització de where
+
+      h2:where(.historia__concurs__h2) span {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        letter-spacing: 0;
+    }
 

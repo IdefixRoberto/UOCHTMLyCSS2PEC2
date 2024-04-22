@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" href="./assets/images/logo.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Historia de la <span class="VallGallineraSpan">Vall</span></title>
+
+</head>
+<body>
+    <include src="./views/header.html"></include>
+  <main>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="./index.html">Inici</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#">Historia</a>
+        </li>
+      </ol>
+    </nav>
+    
+    <h1 class="VallGallinera__h1 ">Què ofereix la Vall de Gallinera?</h1>
+    <!--Modal-->
+    <div class="modal" id="myModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Pàgina de caràcter formatiu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Exercici per al màster</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Tancar</button>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container Vall_info">
+      <div class="Vall_info__text">
+        <p>
+          <span class="VallGallineraSpan">La Vall de Gallinera</span> se prepara per a les seves festes anuals, i com a preludi, arriba el tradicional Concurs de <span class="PostresSpan">Postres</span>, un esdeveniment que posa en valor la dolça gastronomia local i la passió dels seus habitants per la cuina.
+
+        </p>
+
+        <h4 class="Vall_info__text__h4"> Un recorregut per la <span class="VallGallineraSpan">Vall</span> a través de cada <span class="PostresSpan">postre</span> </h4>
+
+
+        <p class="mb-5">En aquesta ocasió, el concurs es desenvolupa al llarg de diversos pobles de la <span class="VallGallineraSpan">Vall</span>, on cada participant presenta la seva creació en una prova específica. A continuació, descobrim els guanyadors de les últimes edicions i els seus deliciosos <span class="PostresSpan">postres</span>:</p>
+      
+      </div>
+      <!-- Tabla premiats-->
+      <div class="row">
+        <div class="col-12">
+          <!-- Responsive table container -->
+          <div class="table-responsive" style="width: 50%; margin: auto;">
+            <table class="table table-striped table-bordered">
+              <thead class="table-dark">
+                <tr>
+                  <th>Any</th>
+                  <th>Premiat</th>
+                  <th>Postre</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-primary">
+                  <td>2021</td>
+                  <td>Aina Idèfix</td>
+                  <td>Pastís de cireres de la <span class="VallGallineraSpan">Vall</span></td>
+                </tr>
+                <tr class="table-secondary">
+                  <td>2022</td>
+                  <td>Reme Casselles</td>
+                  <td>Pastís de Cireres i maduixes</td>
+                </tr>
+                <tr class="table-success">
+                  <td>2023</td>
+                  <td>Salvador Feliu</td>
+                  <td>Pastís de l'armonia</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+        <section class="formulari_cards container">
+          <h2 class="mt-3 text-center"> Els pobles de <span class="VallGallineraSpan">la Vall de Gallinera</span></h2>
+          <div class="row row-cols-1 row-cols-md-4 g-4 py-5">
+            <!-- Benirrama -->
+            <div class="col VallGallinera__Pobles__Poble">
+              <div class="card h-100 text-center">
+                <img src="./assets/images/pobles/benirrama.webp" class="VallGallinera__Pobles__Poble__img     card-img-top" alt="Benirrama">
+                <div class="card-body">
+                  <h5 class="card-title text-center"><span class="poblesVall">Benirrama</span></h5>
+                  <p class="card-text">És el primer poble de la ruta i destaca per la seua font de la Mata de Benirrama. És un lloc tranquil on començar l’aventura per la <span class="VallGallineraSpan">Vall</span>.</p>
+                </div>
+                <div class="card-footer d-flex justify-content-around">
+                  <a href="https://es.wikipedia.org/wiki/Vall_de_Gallinera" class="wikipedia">
+                    <i class="fab fa-2x align-items-center text-center justify-content-center fa-wikipedia-w"></i>
+                  </a>
+                  <a href="https://www.youtube.com/results?search_query=Vall+de+Gallinera" class="youtube">
+                    <i class="fab fa-2x fa-youtube align-items-center text-center justify-content-center "></i>
+                  </a>
+                  <a href="https://www.instagram.com/explore/tags/valldegallinera/" class="instagram align-items-center ">
+                    <i class="fab fa-2x fa-instagram align-items-center text-center justify-content-center "></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+           
+            <!-- Benialí -->
+            <div class="col VallGallinera__Pobles__Poble">
+              <div class="card h-100 text-center">
+                <img src="./assets/images/pobles/Beniali.jpg" class="VallGallinera__Pobles__Poble__img  card-img-top" alt="Benialí">
+                <div class="card-body">
+                  <h5 class="card-title text-center"><span class="poblesVall">Benialí</span></h5>
+                  <p class="card-text">Ací trobaràs l’Església de Sant Joan Baptista i podràs gaudir de vistes panoràmiques dels voltants.</p>
+                </div>
+                <div class="card-footer d-flex justify-content-around">
+                  <a href="https://es.wikipedia.org/wiki/Vall_de_Gallinera" class="wikipedia">
+                    <i class="fab fa-2x align-items-center text-center justify-content-center fa-wikipedia-w"></i>
+                  </a>
+                  <a href="https://www.youtube.com/results?search_query=Vall+de+Gallinera" class="youtube">
+                    <i class="fab fa-2x fa-youtube align-items-center text-center justify-content-center "></i>
+                  </a>
+                  <a href="https://www.instagram.com/explore/tags/valldegallinera/" class="instagram align-items-center ">
+                    <i class="fab fa-2x fa-instagram align-items-center text-center justify-content-center "></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benitaia -->
+            <div class="col VallGallinera__Pobles__Poble">
+              <div class="card h-100 text-center">
+                <img src="./assets/images/pobles/Benitaia.jpg" class="VallGallinera__Pobles__Poble__img   card-img-top" alt="Benitaia">
+                <div class="card-body">
+                  <h5 class="card-title text-center"><span class="poblesVall">Benitaia</span></h5>
+                  <p class="card-text">Un poble tranquil amb una bonica església i un ambient relaxat, ideal per a gaudir de la pau de la <span class="VallGallineraSpan">Vall</span>.</p>
+                </div>
+                <div class="card-footer d-flex justify-content-around">
+                  <a href="https://es.wikipedia.org/wiki/Vall_de_Gallinera" class="wikipedia">
+                    <i class="fab fa-2x align-items-center text-center justify-content-center fa-wikipedia-w"></i>
+                  </a>
+                  <a href="https://www.youtube.com/results?search_query=Vall+de+Gallinera" class="youtube">
+                    <i class="fab fa-2x fa-youtube align-items-center text-center justify-content-center "></i>
+                  </a>
+                  <a href="https://www.instagram.com/explore/tags/valldegallinera/" class="instagram align-items-center ">
+                    <i class="fab fa-2x fa-instagram align-items-center text-center justify-content-center "></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          <!-- La Carroja -->
+          <div class="col VallGallinera__Pobles__Poble">
+            <div class="card h-100 text-center">
+              <img src="./assets/images/pobles/lcarroja.jpg" class="VallGallinera__Pobles__Poble__img  card-img-top" alt="La Carroja">
+              <div class="card-body">
+                <h5 class="card-title text-center"><span class="poblesVall">La Carroja</span></h5>
+                <p class="card-text">Aquest poble és famós pels seus cerezos en flor durant el mes de març i per la font de la Carroja.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-around">
+                <a href="https://es.wikipedia.org/wiki/Vall_de_Gallinera" class="wikipedia">
+                  <i class="fab fa-2x align-items-center text-center justify-content-center fa-wikipedia-w"></i>
+                </a>
+                <a href="https://www.youtube.com/results?search_query=Vall+de+Gallinera" class="youtube">
+                  <i class="fab fa-2x fa-youtube align-items-center text-center justify-content-center "></i>
+                </a>
+                <a href="https://www.instagram.com/explore/tags/valldegallinera/" class="instagram align-items-center ">
+                  <i class="fab fa-2x fa-instagram align-items-center text-center justify-content-center "></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alpatró -->
+          <div class="col VallGallinera__Pobles__Poble">
+            <div class="card h-100 text-center">
+              <img src="./assets/images/pobles/AlpatróR.png" class="VallGallinera__Pobles__Poble__img  card-img-top" alt="Alpatró">
+              <div class="card-body">
+                <h5 class="card-title text-center"><span class="poblesVall">Alpatró</span></h5>
+                <p class="card-text">Un poble menut amb carrers empedrats i una església encantadora, perfecte per a una escapada tranquila.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-around">
+                <a href="https://es.wikipedia.org/wiki/Vall_de_Gallinera" class="wikipedia">
+                  <i class="fab fa-2x align-items-center text-center justify-content-center fa-wikipedia-w"></i>
+                </a>
+                <a href="https://www.youtube.com/results?search_query=Vall+de+Gallinera" class="youtube">
+                  <i class="fab fa-2x fa-youtube align-items-center text-center justify-content-center "></i>
+                </a>
+                <a href="https://www.instagram.com/explore/tags/valldegallinera/" class="instagram align-items-center ">
+                  <i class="fab fa-2x fa-instagram align-items-center text-center justify-content-center "></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Llombai -->
+          <div class="col VallGallinera__Pobles__Poble">
+            <div class="card h-100 text-center">
+              <img src="./assets/images/pobles/llombaiR2.png" class="VallGallinera__Pobles__Poble__img  card-img-top" alt="Llombai">
+              <div class="card-body">
+                <h5 class="card-title text-center"><span class="poblesVall">Llombai</span></h5>
+                <p class="card-text">Ací pots visitar l’Església de Sant Joan Baptista i admirar les vistes de les muntanyes que envolten el poble.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-around">
+                <a href="https://es.wikipedia.org/wiki/Vall_de_Gallinera" class="wikipedia">
+                  <i class="fab fa-2x align-items-center text-center justify-content-center fa-wikipedia-w"></i>
+                </a>
+                <a href="https://www.youtube.com/results?search_query=Vall+de+Gallinera" class="youtube">
+                  <i class="fab fa-2x fa-youtube align-items-center text-center justify-content-center "></i>
+                </a>
+                <a href="https://www.instagram.com/explore/tags/valldegallinera/" class="instagram align-items-center ">
+                  <i class="fab fa-2x fa-instagram align-items-center text-center justify-content-center "></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Benissili -->
+          <div class="col VallGallinera__Pobles__Poble">
+            <div class="card h-100 text-center">
+              <img src="./assets/images/pobles/benissil.jpg" class="VallGallinera__Pobles__Poble__img  card-img-top" alt="Benissili">
+              <div class="card-body">
+                <h5 class="card-title text-center"><span class="poblesVall">Benissili</span></h5>
+                <p class="card-text">L’últim poble de la ruta, on podràs trobar la font de Benissili i gaudir de l’autenticitat i la bellesa natural de la <span class="VallGallineraSpan">Vall</span>.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-around">
+                <a href="https://es.wikipedia.org/wiki/Vall_de_Gallinera" class="wikipedia">
+                  <i class="fab fa-2x align-items-center text-center justify-content-center fa-wikipedia-w"></i>
+                </a>
+                <a href="https://www.youtube.com/results?search_query=Vall+de+Gallinera" class="youtube">
+                  <i class="fab fa-2x fa-youtube align-items-center text-center justify-content-center "></i>
+                </a>
+                <a href="https://www.instagram.com/explore/tags/valldegallinera/" class="instagram align-items-center ">
+                  <i class="fab fa-2x fa-instagram align-items-center text-center justify-content-center "></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+
+<!-- Galieria imatges-->
+<section class="VallGallinera__Galeria">
+  <!-- slider-->
+  <div id="VallGallinera__Galeria__slider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#VallGallinera__Galeria__slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#VallGallinera__Galeria__slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#VallGallinera__Galeria__slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">    
+      <div class="carousel-item active VallGallinera__Galeria__slider__container__images">
+      <img class="d-block w-100" src="./assets/images/galeriaPastis/pastis1.jpg" alt="Pastis 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Primer guanyador del concurs</h5>
+        <p>Pastis de cireres de la <span class="VallGallineraSpan">Vall</span>.</p>
+      </div>
+    </div>
+    <div class="carousel-item VallGallinera__Galeria__slider__container__images">
+      <img class="d-block w-100" src="./assets/images/galeriaPastis/pastis7.jpg" alt="Pastis 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Pastis de Cireres i maduixes</h5>
+        <p>Aquest pastis va ser elaborat per la cuinera de la <span class="VallGallineraSpan">Vall</span> Angela Idefix</p>
+      </div>
+    </div>
+
+    <div class="carousel-item VallGallinera__Galeria__slider__container__images ">
+      <img class="d-block w-100" src="./assets/images/galeriaPastis/pastis5.jpg" alt="Pastis 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Pastis de l'armonia</h5>
+        <p>La seua decoració de flors de cirerer recorda a la <span class="VallGallineraSpan">Vall</span></p>
+      </div>
+    </div>
+
+
+
+
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#VallGallinera__Galeria__slider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#VallGallinera__Galeria__slider" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
+
+
+  </div>
+</div>
+  <!-- fi Slider-->
+</section>
+
+
+
+
+<section class="formulari container w-75 mt-5 shadow">
+
+    <div class="row align-items-stretch m-2 formulari__container">
+      <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6 formulari__container1">
+
+      </div>
+      <div class="col bg-opacity-25 formulari__container2 ">
+        <h2 class="fw-bold text-center pt-5 mb-5">
+          Inscriute per a tenir més informació
+        </h2>
+        <div class="alert alert-success alert-dismissible fade d-none" role="alert" id="alert-Formulari">
+          Dades enviades correctament
+        </div>
+        <form action="#">
+          <div class="mb-4">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email">
+          </div>
+          <div class="mb-4">
+            <label for="name" class="form-label">Nom</label>
+            <input type="email" class="form-control" name="name">
+          </div>
+          <div class="mb-4 form-check">
+            <input type="checkbox" name="validar" class="form-check-input">
+            <label for="connected" class="form-check-label">Accepte les condicions d'us</label>
+          </div>
+          <!-- utilitze d-grid per a que ocupe tot l'espai-->
+          <div class="d-grid">
+            <button type="button" id="boto-Formulari" class="btn btn-primary">Enviar dades</button>
+          </div>
+        </form>
+
+        <!---->
+        <div class="container w-100 my-5">
+          <div class="row text-center">
+            <div class="col-12 p-1  text-bg  fs-4">Les nostres xarxes</div>
+
+          </div>
+          <div class="row">
+          <div class="col">
+            <button class="btn btn-outline-primary w-100 my-1">
+              <div class="row align-items-center">
+                <div class="col-2 align-items-center">
+                  <img src="./assets/images/Gallinera/Logo/Logofacebook.png" width="32px" alt="Logotik-tok">
+                </div>
+                <div class="col-10 text-center">
+                  Facebook
+                </div> 
+              </div>
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger w-100 my-1">
+              <div class="row align-items-center">
+                <div class="col-2">
+                  <img src="./assets/images/Gallinera/Logo/LogoYoutbe.png" width="32px" alt="Logotik-tok">
+                </div>
+                <div class="col-10 text-center">
+                  YouTube
+                </div> 
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+</section>
+
+<section class="bg-light">
+  <h2 class="text-center padding-1">  On ens trobaras</h2>
+
+  <div class="container p-0  VallGallinera_OnEstem">
+   
+      <!-- Columna del Logotip -->
+      <div class="col-md-4 mb-3 VallGallinera_OnEstem__logo">
+        <img src="./assets/images/GallineraLogo2.png" alt="Logo Gallinera" class="footer-logo" data-bs-toggle="tooltip" data-bs-placement="top" title="L'esencia de la Vall">
+    </div>
+  
+      <!-- Columna del Mapa -->
+      <div class="col-md-4 mb-3 VallGallinera_OnEstem__maps">
+        <div class="map-responsive">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49732.65013341492!2d-0.2753117492881515!3d38.82580431506004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd61ed8ab195332b%3A0x1ff2013b2d034873!2sVall%20de%20Gallinera%2C%2003787%2C%20Alicante!5e0!3m2!1ses!2ses!4v1713699819814!5m2!1ses!2ses" width="400px" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </iframe>
+        </div>
+      </div>
+  
+      <!-- Columna de Contacte -->
+      <div class="col-md-4 mb-3 VallGallinera_OnEstem__contact">
+        <h2>Informació</h2>
+        <ul class="list-unstyled">
+          <li><a href="mailto:exemple@gallinera.com" class="footer-link">exemple@gallinera.com</a></li>
+
+          <li><a href="tel:+34XXXXXXXX" class="footer-link">+34 XXXXXXXXXX</a></li>
+          
+        </ul>
+      </div>
+    
+  </div>
+</section>
+
+   
+</main>
+  
+
+<footer>
+  <include src="./views/footer.html"></include>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <script type="text/javascript" src="./assets/scripts/grafic.js"></script><!-- do not remove this line! -->
+  </body>
+</html>
+

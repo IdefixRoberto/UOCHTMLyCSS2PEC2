@@ -1,0 +1,253 @@
+@import "bootstrap/scss/bootstrap";
+
+
+.historia {
+  margin: 5vh 15%;
+
+  &__articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__article {
+      p {
+        span {
+          color: green;
+          font-family: $font-family-Comic;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__contenidor {
+      display: flex;
+      flex-direction: column;
+
+      @supports (container-type: inline-size) {
+        container-type: inline-size;
+
+        &__activitats { 
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 40px;
+          width: 100%;
+
+          @container (max-width: 768px) {
+            flex-direction: column;
+
+            &:nth-child(odd), &:nth-child(even) {
+              flex-direction: column-reverse;
+            }
+          }
+
+          &:nth-child(odd) {
+            flex-direction: row-reverse;
+          }
+
+          &__text {
+            flex: 1;
+            padding: 0 20px;
+            background-color: #f0f0f0;
+          }
+
+          &__imatge {
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            max-width: 500px;
+
+            img {
+              max-width: 100%;
+              height: auto;
+              object-fit: contain;
+              margin-bottom: 2vh;
+            }
+          }
+        }
+      }
+
+      // Fallback with media queries if container queries are not supported
+      @media (max-width: $phone) {
+        &__activitats {
+          flex-direction: column;
+
+          &:nth-child(odd), &:nth-child(even) {
+            flex-direction: column-reverse;
+          }
+        }
+      }
+    }
+  }
+
+  &__cites {
+    margin: 0 15%;
+    &__quote {
+      padding: 1rem;
+      margin: 1rem 0;
+      border-left: 5px solid $gray;
+      font-family: $font-family-Comic;
+      &-fuster {
+        font-style: italic;
+      }
+    }
+  }
+
+  &__viatjar {
+    width: 100%;
+    &-description {
+      font-family: $font-family-TitilliumWeb;
+      margin-bottom: 2rem;
+    }
+    &__planning {
+      &__heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2.5% 0;
+      }
+      &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+
+        @media (max-width: $phone) {
+          flex-direction: column;
+        }
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 5% 10%;
+
+          &:hover {
+            background-color: $light-color;
+            transform: translateY(-15px);
+          }
+
+          &__icon {
+            margin-bottom: 20px;
+          }
+
+          &__text {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  &__demografia {
+    margin: 0 15% 5% 15%;
+  }
+}
+
+
+
+.historia__articles__contenidor {
+  .historia__articles__contenidor__activitats {
+    &:where(:nth-child(odd)) .historia__articles__contenidor__activitats__text {
+      background-color: $uoc-masterbrand; // Color para los elementos impares
+    }
+
+    &:where(:nth-child(even)) .historia__articles__contenidor__activitats__text {
+      background-color: $light-green; // Color para los elementos pares
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  #demografiaChart {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    display: none;
+  }
+}
+
+.historia{
+  &__concurs{
+    &__h2{
+  
+&__1{
+  animation: animacioArcoiris 4s infinite linear;
+}
+&__2{
+  animation: animacioArcoiris 4.25s infinite linear;
+}
+&__3{
+  animation: animacioArcoiris 4.5s infinite linear;
+}
+&__4{
+  animation: animacioArcoiris 4.75s infinite linear;
+}
+&__5{
+  animation: animacioArcoiris 5s infinite linear;
+}
+&__6{
+  animation: animacioArcoiris 5.25s infinite linear;
+}
+&__7{
+  animation: animacioArcoiris 5.5s infinite linear;
+}
+&__8{
+  animation: animacioArcoiris 5.75s infinite linear;
+}
+&__9{
+  animation: animacioArcoiris 6s infinite linear;
+}
+&__10{
+  animation: animacioArcoiris 6.25s infinite linear;
+}
+&__11{
+  animation: animacioArcoiris 6.5s infinite linear;
+}
+&__12{
+  animation: animacioArcoiris 6.75s infinite linear;
+}
+&__13{
+  animation: animacioArcoiris 7s infinite linear;
+}
+&__14{
+  animation: animacioArcoiris 7.25s infinite linear;
+}
+&__15{
+  animation: animacioArcoiris 7.5s infinite linear;
+}
+&__16{
+  animation: animacioArcoiris 7.75s infinite linear;
+}
+}
+}
+}
+
+.cita-personatge{
+  margin-left: 10xp;
+}
+
+.cita-famos {
+  font-style: italic;
+  color: #555;
+  margin-left: 10xp;
+}
+
+:is(p.cita-famos, p.cita-personatge) {
+  font-size: 1.2em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+:where(p.cita-famos, p.cita-personatge) {
+  border-left: 3px solid $orange;
+  margin-left: 20px;
+}
+
+p.cita-personatge:has(.nom-personatge) {
+  font-weight: bold;
+}

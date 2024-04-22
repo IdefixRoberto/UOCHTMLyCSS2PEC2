@@ -1,53 +1,35 @@
-// Configuració del Header
+
+
 .header {
-  font-family: $font-family-Comic; // Utilitza una variable SCSS per a la tipografia
-  background: $back-image no-repeat center right/cover; // Imatge de fons
-  height: 100vh; // Ocupa tota l'alçada de la pantalla 
-  color: $color-secundari;
-
-  &__content { // Contenidor per al contingut de l'encapçalament
-    text-align: center;
-    padding: 20%; 
-
-    &__h1 { // Estil per al títol principal (H1)
-      font-size: 4rem; 
-      line-height: 5rem; // Increment per a una millor llegibilitat
-    }
+  padding: 2.5vh 15%;
+  min-height: 10vh;
+  &__logo {
+    flex: 0 0 auto;
+    text-align: start;
   }
 
-  &__nav { // Menú de navegació
+  &__nav a {
+    font-size: 1.2rem;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  @media (max-width: $phone) {
+    min-height:0;
     display: flex;
-    justify-content: space-between; // Espais iguals entre elements
-    padding-top: 1rem;
-
-    ul { // Llista no ordenada de navegació
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    &__logo {
       display: flex;
-      justify-content: space-between; 
-      width: 100%; 
-      padding: 0 auto;
-      font-size: 1.5rem;
-      font-weight: bold; 
+      flex-direction: column;
     }
-
-    li { // Elements de llista individials 
-      padding: 1rem 1.3rem;
-    }
-
-    a { // Estil per als enllaços
-      text-decoration: none; 
-      color: $color-secundari; 
-      text-decoration: uppercase; // Text en majúscules
-      border-bottom: 3px transparent solid; // Ressaltat transparent inicial
-      transition: border-color 0.5s; // Transició suau del ressaltat 
-
-      &:hover { // Estils al passar el ratolí sobre l'enllaç
-        border-color: $medium-color; 
-      }
+  
+    &__nav  {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
-  
-
- 
-
-

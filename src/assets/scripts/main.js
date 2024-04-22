@@ -10,122 +10,92 @@
  * Write any other JavaScript below
  */
 
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
+
+document.addEventListener('DOMContentLoaded', function() {
+  var myCarousel = document.querySelector('#VallGallinera__Galeria__slider');
+  console.log(myCarousel); // Debería mostrar el elemento del DOM si se encuentra correctamente
+  var carousel = new bootstrap.Carousel(myCarousel);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+    keyboard: false
+  });
+  myModal.show(); // Mostrar el modal automáticamente
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var myCarouselElement = document.querySelector('#VallGallinera__Galeria__slider');
+  console.log(myCarouselElement); // Verifica que se capture el elemento del DOM correctamente
+
+  if (myCarouselElement) {
+    var carousel = new bootstrap.Carousel(myCarouselElement);
+    console.log('Carrusel inicializado:', carousel);
+  } else {
+    console.log('El elemento del carrusel no fue encontrado');
+  }
+});
 
 
-const nomInput = document.getElementById("nom");
-const telefonInput = document.getElementById("telefon");
-const emailInput = document.getElementById("email");
-const submitButton = document.getElementById("submit-btn");
-const errorNom = document.getElementById("error-nom");
-const errorTelefon = document.getElementById("error-telefon");
-const errorEmail = document.getElementById("error-email");
-const amagarFormulari = document.getElementById("amagar");
-const homeFormulari = document.getElementById("home-g");
-const missatgeEnviat = document.getElementById("form-Wiew")
+//Boto Alert
 
 
-
-const validarNom = (nombre) => {
-    return nombre.length >= 5;
-};
-
-const validarTelefon = (telefon) => {
-    const regex = /^\d{9}$/;
-    return regex.test(telefon);
-};
-
-const validarEmail = (email) => {
-    const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return regex.test(email);
-};
+var submitButton = document.getElementById('boto-Formulari');
+submitButton.addEventListener('click', function(event) {
   
+  event.preventDefault(); // Evita la recarga de la página o el envío de un formulario real.
 
-const mostrarError = (input, mensaje, corregir) => {
-    input.textContent = mensaje;
-    input.classList.add("error");
-    corregir.classList.add("errorInput");
-};
+  var alertElement = document.getElementById('alert-Formulari');
+  alertElement.classList.remove('d-none'); // Elimina la clase 'd-none' para mostrar el alert.
+  alertElement.classList.add('show'); // Asegúrate de que la clase 'show' está presente.
 
-const ocultarError = (input, corregir) => {
-    input.textContent = "";
-    input.classList.remove("error");
-    corregir.classList.remove("errorInput");
-};
-
-const actualizarBoton = () => {
-    submitButton.disabled = !(validarNom(nomInput.value) && validarTelefon(telefonInput.value) && validarEmail(emailInput.value));
-};
-
-
-
-submitButton.addEventListener("click", () => {
-
-    missatgeEnviat.classList.add("opacity");
-    missatgeEnviat.classList.remove("Noopacity");
-    setTimeout(function() {
-        missatgeEnviat.classList.add("Noopacity");
-        missatgeEnviat.classList.remove("opacity");
-      }, 5000);
-
+  // Establece un temporizador para ocultar el alert después de 10 segundos.
+  setTimeout(function() {
+    alertElement.classList.remove('show'); // Oculta el alert
+    alertElement.classList.add('d-none'); // Vuelve a ocultar el alert completamente
+  }, 2000) 
 });
 
-nomInput.addEventListener("input", () => {
-    actualizarBoton();
-    if (validarNom(nomInput.value)) {
-        ocultarError(errorNom, nomInput);
-    } else {
-        mostrarError(errorNom, "El nom deu contenir com a minim 5 caràcters", nomInput);
-    }
 
-});
 
-telefonInput.addEventListener("input", () => {
-    actualizarBoton();
-    if (validarTelefon(telefonInput.value)) {
-        console.log("Hola")
-        ocultarError(errorTelefon, telefonInput);
-    } else {
-        mostrarError(errorTelefon, "El teléfon no te un format vàlit", telefonInput);
-    }
 
-});
 
-emailInput.addEventListener("input", () => {
-    actualizarBoton();
-    if (validarEmail(emailInput.value)) {
-        ocultarError(errorEmail, emailInput);
-        
-    } else {
-        mostrarError(errorEmail, "El email no te un format vàlit", emailInput);
-    }
+
+
+
+$(document).ready(function() {
+  
+  function updateButtonState() {
+    let isValid = true;
     
+    $('input[required]').each(function() {
+      if (!this.checkValidity()) isValid = false;
+    });
+
+    let submitButton = $('#submit-button');
+    if (isValid) {
+      submitButton.removeClass('btn-secondary').addClass('btn-primary');
+      submitButton.prop('disabled', false); // Habilita el botón
+    } else {
+      submitButton.removeClass('btn-primary').addClass('btn-secondary');
+      submitButton.prop('disabled', true); // Deshabilita el botón
+    }
+  }
+
+  
+  $('input[required]').on('change input', function() {
+    updateButtonState();
+  });
+
+  // Inicializar el estado del botón al cargar la página
+  updateButtonState();
 });
 
 
-function amagar() { 
-
-
-    if(amagarFormulari.textContent=="Subscriures"){
-        homeFormulari.classList.remove("dissableForm")
-    amagarFormulari.textContent = "Amagar Formulari";
-
-    amagarFormulari.classList.remove("amagar");
-    amagarFormulari.classList.add("amagar2");
-        }
-
-        else{
-            amagarFormulari.textContent = "Subscriures";
-            homeFormulari.classList.add("dissableForm");
-            amagarFormulari.classList.remove("amagar");
-            amagarFormulari.classList.add("amagar2")
-        }
-
-}
-
-amagarFormulari.addEventListener("click", () =>{
-    amagar()
-})

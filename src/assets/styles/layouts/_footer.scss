@@ -1,58 +1,60 @@
-//footer1
+.logo {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto; 
+  height: auto;
+}
+
+.social-icon {
+  margin: 0 10px; 
+  color: $dark-color; 
+
+  &:hover {
+    transform: scale(1.1); 
+  }
+}
+
+
+.fa-google:hover {
+  color: #4285F4; 
+}
+.fa-facebook-f:hover {
+  color: #3B5998;
+}
+.fa-twitter:hover {
+  color: #1DA1F2; 
+}
+
+
 .footer {
-  background: $dark-color; // Utilitza una variable SCSS per al color de fons
-  color: $color-secundari; // Color del text
-  margin-top: 5%; 
-  top: 0; // Aquesta propietat pot estar sobreescribint estils no desitjats 
-
-  &__content {
+  background-color: $gray; // Define un color de fondo
+  color: white;
+  padding: 2rem 0;
+  min-height: 10vh;
+  // Flexbox properties for the container
+  .container {
     display: flex;
-    justify-content: space-between; // Justifica els elements amb espai entre
-    padding: 4rem 0;
-    margin: 0 10vh;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
-    @media (max-width: $phone) {  // Breakpoint per a dispositius mòbils
-      display: grid;
-      grid-template-columns: 1fr; // Una sola columna a mòbils
-    }
-  }
-
-  &__copy { 
-    display: flex;
-    flex-direction: row;  // Alinea els elements en una fila
-
-    img {
-      max-width: 15rem; 
-      max-height: 15rem;
-      margin-right: 6rem; // Espai a la dreta de la imatge
-      background: $color-secundari;  
-    }
-  }
-
-  .social { // Classe per a les icones de xarxes socials
-    @media (max-width: $phone) {
+    > div {
+      // Alignment for items in larger screens
       display: flex;
-      flex-direction: column; // Alineació vertical a mòbils
+      align-items: center;
       justify-content: center;
-      text-align: center;
-      align-items: center; 
+    }
+  }
 
-      .fab {
-        margin-bottom: 20px; 
+  // Responsive adjustments for smaller screens
+  @media (max-width: $phone) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+
+      > div {
+        width: 100%; // Ensure full width for small devices
+        margin-bottom: 1rem; // Add space between items
       }
     }
-
-    .fab {
-      margin-right: 1rem; 
-      border: 0.1rem solid $dark-color;  
-      border-radius: 50%; 
-      line-height: 20px;
-      text-align: center;
-      padding: 0.5rem;
-
-      &:hover {
-        background-color: #20B2AA; 
-      }
-    }
-  } 
-} 
+  }
+}

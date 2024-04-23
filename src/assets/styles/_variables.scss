@@ -28,15 +28,15 @@ $phone: 600px;
 $gray: #808080;
 $blue: #0000FF;
 $orange: #FFA500;
-$red: #FF0000;
+$red: color.hwb(0deg,0%,0%);
 $tomaca: #FF6347;
 $lightblue: #ADD8E6;
 $graylight: #8080807a;
-$white:  #f4f4f4ed;
+$white: color.hwb(0deg,95.68627450980392%,4.313725490196077%);
 $light-green: #53ff95;
 $green: #045423;
 $light-color: #f8f9fa;
-$groc: #ffe259;
+$groc: color.hwb(0deg,35%,0%);
 $taronja: #ffa751;
 $cirera: #952F57;
 $bluelight: #9191ff;
@@ -44,6 +44,7 @@ $morat: #572364;
 $moratlight: #f3c5ff;
 $claret:  #fee9e9a5;
 $galeriaFons:  #fee9e91b;
+$color2: color.hwb(29.655, 32%, 0%);
 /*
 
 */

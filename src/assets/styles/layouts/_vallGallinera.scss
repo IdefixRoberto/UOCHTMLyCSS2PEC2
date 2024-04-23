@@ -16,17 +16,16 @@
  
     text-align: center;
     font-size: 2.5rem;
-    font-family: $font-family-Comic; /* Fuente estilo máquina de escribir */
-    white-space: nowrap; /* Evita que el texto se envuelva a la línea siguiente */
-    overflow: hidden; /* Oculta el texto que sobrepasa el ancho del contenedor */
-    border-right: .15em solid transparent; /* Simula el cursor parpadeante */
-    width: 0; /* Empieza la animación con el contenedor a 0 de ancho */
+    font-family: $font-family-Comic; 
+    white-space: nowrap; 
+    overflow: hidden; /* Oculta el text fora del contenidor */
+    border-right: .15em solid transparent; /* Simula el cursor parpadejant */
+    width: 0; 
     animation: typing 6s steps(30, end) forwards, blink-caret .5s step-end 5;
     @media (max-width: $phone) {
       font-size: 1.6rem;
     }
-    /* La animación 'typing' corre una vez y usa 'forwards' para mantener el estado final.
-       'blink-caret' crea el efecto de parpadeo del cursor durante la animación. */
+    
   }
   
 
@@ -37,8 +36,16 @@
     margin: 5% 75%;
   background: $white;
   background: linear-gradient(to right, $cirera,$light-color, $white);
+
+  @media (max-width: $tablet) {
+    background: $gray;
+    color: $white;
+    font-family: $font-family-Comic;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
   border-radius: 20px;
-  &__container1{
+  &__image-container{
     background-image: url(../images/Gallinera/cherry-105141.svg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -50,67 +57,105 @@
   }
 }
 
-.VallGallinera__Pobles__Poble__img{
+.VallGallinera__Pobles{
+  
+  &__Poble{
+    border-radius: 15%;
+    &__img{
   width: 100%;  
-  height: auto; 
-  max-width: 400px; 
-  max-height: 150px; 
+} 
+}
+}
+.VallGallinera__Pobles{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3vh;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   @media (max-width: $phone) {
-    .card-img-top {
-      max-width: 100%; 
-      max-height: auto; 
-    }
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  container-type: inline-size;
+  container-name: cardsGallinera;
   
 }
 
-.VallGallinera_OnEstem{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-items: center;
-  width: 15vh;
-  padding: 0 150px;
-  @media (max-width: $phone) {
-    flex-direction: column;
+
+.location__contact {
+ 
+  &__title {
+    color: #333; 
+    margin-bottom: 1rem; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
   }
 
-  @supports (container-type: inline-size) {
-    container-type: inline-size;
+  &__list {
+    
+    list-style-type: none; 
+    padding-left: 0; 
+    margin-top: 1rem; 
+  }
 
-    @container (max-width: 600px) {
-        flex-direction: column;
+  &__item {
+    
+    margin-bottom: 0.5rem; 
+  }
+
+  &__link {
+    
+    color: #007bff; 
+    font-weight: 500; 
+    text-decoration: none; 
+
+    &:hover, &:focus {
+    
+      text-decoration: none; 
+      color: #0056b3; 
     }
+  }
 }
-  &__logo {
-    text-align: center;
+.location {
+  &__container {
+    display: flex;
     justify-content: center;
-    .footer-logo {
-      max-height: 20vh; // Alçada màxima de la imatge
-      width: auto; // Manté la proporció de la imatge
-    }
-  }
+    align-items: center;
+    width: 100%; 
+    padding: 0 150px;
+    gap: 5vh;
 
-  &__maps {
-    .map-responsive iframe {
-      width: 100%; // Ajusta el mapa per ocupar tot l'amplària disponible
-      height: auto; // Alçada fixa per al mapa
-    }
-  }
 
-  &__contact {
-    text-align: center; // Centra el text dins del div de contacte
 
-    .footer-link {
-      display: inline-block; // Permet alinear en el centre links individuals
-      margin: 0 auto; // Margen automàtic per centrar dins del seu contenidor
+    @media (max-width: $tablet) { 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+
+      &__logo, &__map, &__contact {
+        width: 100%; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+        
+
+      }
     }
   }
 }
 
 .VallGallinera__Galeria{
   margin: 2% 25%;
+  @media (max-width: $tablet) {
+    margin: 2% 5%;
+  }
   &__slider{
     &__container{
       &__images{
@@ -141,38 +186,32 @@
   }
 }
 
+@supports (container-type: inline-size) {
+ 
 
-//Boostrap
+  @container cardsGallinera (min-width: 200px) {
+    .VallGallinera__Pobles__Poble__img{
+      height: 150px;
+    }
+  }
 
-$carousel-control-color:             $white;
-$carousel-control-width:             15%;
-$carousel-control-opacity:           .5;
-$carousel-control-hover-opacity:     .9;
-$carousel-control-transition:        opacity .15s ease;
+  @container  cardsGallinera (min-width: 200px) and (max-width: 300px) {
+    .VallGallinera__Pobles__Poble__img{
+      height: 200px;
+    }
+    }
+    @container  cardsGallinera (min-width: 300px) and (max-width: 400px) {
+      .VallGallinera__Pobles__Poble__img{
+        height: 300px;
+      }
+      }
 
-$carousel-indicator-width:           30px;
-$carousel-indicator-height:          3px;
-$carousel-indicator-hit-area-height: 10px;
-$carousel-indicator-spacer:          3px;
-$carousel-indicator-opacity:         .5;
-$carousel-indicator-active-bg:       $white;
-$carousel-indicator-active-opacity:  1;
-$carousel-indicator-transition:      opacity .6s ease;
+  @container home  (max-width: 400px) {
+    .VallGallinera__Pobles__Poble__img{
+      height: 400px;
+    }
+    }
+}
 
-$carousel-caption-width:             70%;
-$carousel-caption-color:             $white;
-$carousel-caption-padding-y:         1.25rem;
-$carousel-caption-spacer:            1.25rem;
 
-$carousel-control-icon-width:        2rem;
-
-$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
-$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
-
-$carousel-transition-duration:       .6s;
-$carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
-
-$carousel-dark-indicator-active-bg:  $black;
-$carousel-dark-caption-color:        $black;
-$carousel-dark-control-icon-filter:  invert(1) grayscale(100);
 

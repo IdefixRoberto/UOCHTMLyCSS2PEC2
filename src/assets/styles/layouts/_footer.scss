@@ -8,12 +8,10 @@
 .social-icon {
   margin: 0 10px; 
   color: $dark-color; 
-
   &:hover {
     transform: scale(1.1); 
   }
 }
-
 
 .fa-google:hover {
   color: #4285F4; 
@@ -27,33 +25,46 @@
 
 
 .footer {
-  background-color: $gray; // Define un color de fondo
+  background-color: $gray;
   color: white;
   padding: 2rem 0;
   min-height: 10vh;
-  // Flexbox properties for the container
-  .container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+
+
+  &__container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
 
     > div {
-      // Alignment for items in larger screens
+      flex: 1 0 20%; 
       display: flex;
+      justify-content: center; 
       align-items: center;
-      justify-content: center;
+      width: 100%; 
+      margin-bottom: 1rem; 
+
+      a {
+        color: $white;
+        font-size: $font-family-Comic; 
+        font-size: 1rem;
+      }
     }
   }
 
-  // Responsive adjustments for smaller screens
-  @media (max-width: $phone) {
-    .container {
+  @media (max-width: $tablet) {
+    .footer__container {
       flex-direction: column;
-      text-align: center;
 
       > div {
-        width: 100%; // Ensure full width for small devices
-        margin-bottom: 1rem; // Add space between items
+        flex: none; 
+        width: 100%; 
       }
     }
   }

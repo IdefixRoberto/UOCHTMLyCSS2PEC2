@@ -1,77 +1,4 @@
-/*
 
-.cuiners {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; 
-  width: 70%;
-  margin: 10vh auto; 
-  position: relative;
-
-  @media (max-width: $tablet) {
-    justify-content: space-around; 
-  }
-
-  @media (max-width: $phone) {
-    flex-direction: column;
-    align-items: center; // 
-  }
-
-  &__concursant {
-    background-color: #f0f0f0;
-    border-radius: 30px;
-    padding: 2.5vh;
-    margin-bottom: 20px;
-    width: calc(33.333% - 4%); // Extrac el marge dels elements
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    @media (max-width: $tablet) {
-      width: calc(50% - 4%); // 2 elements per fila i elimine el marge
-      padding: 5vh;
-    }
-
-    @media (max-width: $phone) {
-      width: 100%; // Un sol element per fila a telèfons
-    }
-
-    &:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 15px #ff6347;
-    }
-
-    &__imagen {
-      width: 100%;
-      max-height: 300px;
-      margin-bottom: 5%;
-    }
-
-    &__contingut {
-      
-
-      &__nom, &__descripcio, &__texto {
-        margin-bottom: 2.5%;
-      }
-    }
-
-    &__stars {
-      display: inline-block;
-      color: #ccc;
-      margin: 5% 2%;
-
-      i {
-        cursor: pointer;
-        
-        &:hover,
-        &:hover ~ i {
-          color: gold;
-        }
-      }
-    }
-  }
-}
-*/
 
 /* Codi Cuiners*/
 
@@ -82,86 +9,109 @@
   width: 70%;
   margin: 10vh auto; 
   position: relative;
-
-  // Media Queries como Fallback
+  
+  
   @media (max-width: $tablet) {
     justify-content: space-around;
+    width: 85%;
+
+
+  
+    .fa-tiktok {
+      color: #69c9d0;
+    }
+  
+    .fa-instagram {
+      color: #bc2a8d;
+    }
+  
+    .fa-youtube {
+      color: #ff0000;
+    }
+  
+    .fa-discord {
+      color: #7289da;
+    }
   }
 
   @media (max-width: $phone) {
-    flex-direction: column;
     align-items: center;
+    width: 90%;
   }
 
-  // Container Queries si son soportados
-  @supports (container-type: inline-size) {
-    container-type: inline-size;
 
-    @container (max-width: 768px) { 
-      justify-content: space-around;
-    }
-
-    @container (max-width: 480px) { 
-      flex-direction: column;
-      align-items: center;
-    }
-  }
 
   &__concursant {
+    container-type: inline-size;
     background-color: #f0f0f0;
     border-radius: 30px;
     padding: 2.5vh;
     margin-bottom: 20px;
-    width: calc(33.333% - 4%); // Restamos el margen entre elementos
+    width: calc(33.333% - 4%); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     justify-content: center;
     align-items: center;
 
     @media (max-width: $tablet) {
-      width: calc(50% - 4%); // 2 elementos por fila en tablets
+      width: calc(50% - 4%); 
       padding: 5vh;
+      margin-bottom: 5vh;
     }
 
     @media (max-width: $phone) {
-      width: 100%; // Un solo elemento por fila en teléfonos
+      width: 100%; 
     }
 
     &:hover {
       transform: scale(1.1);
-      box-shadow: 0 0 15px #ff6347;
+      box-shadow: 0 0 15px $tomaca;
+      z-index: 2;
     }
 
-    &__imagen {
-      width: 100%;
-      max-height: 300px;
-      margin-bottom: 5%;
-    }
 
-    &__contingut {
-      &__nom, &__descripcio, &__texto {
-        margin-bottom: 2.5%;
-      }
-    }
+  }
 
-    &__stars {
-      display: inline-block;
-      color: #ccc;
-      margin: 5% 2%;
-      
-      i {
-        cursor: pointer;
-        &:hover, &:hover ~ i {
-          color: gold;
-        }
+  &__imatge {
+    width: 100%;
+    max-height: 300px;
+    margin-bottom: 5%;
+  }
+
+  &__contingut {
+    &__nom, &__descripcio, &__text {
+      margin-bottom: 2.5%;
+    }
+  }
+
+  &__estrelles {
+    display: inline-block;
+    color: #ccc;
+    margin: 5% 2%;
+    
+    i {
+      cursor: pointer;
+      &:hover, &:hover ~ i {
+        color: gold;
       }
     }
   }
+  &__xarxes{
+    display: flex;
+    justify-content: space-around;
+
+    text-decoration: none;
+    font-size: 2rem;
+    i{
+      color:$dark-color;
+    }
+  }
+
 }
 
 //Per a que funcione el js
 
-.cuiners__concursant__stars i {
+.cuiners__estrelles i {
   cursor: pointer;
   color: #ccc; // color por defecto de las estrellas
   transition: color 0.2s;
@@ -174,4 +124,74 @@
   &:hover ~ i {
       color: gold;
   }
+}
+
+
+  // Container Queries si son soportats
+
+@supports (container-type: inline-size) {
+  @container  (max-width: 200px) {
+    .cuiners__imatge{
+      height: 150px;
+      width: 100%;
+    }
+  
+    .cuiners__xarxes{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  
+      i{
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  @container (min-width: 200px) and (max-width: 300px) {
+    .cuiners__imatge{
+      height: 250px;
+      width: 100%;
+    }
+  
+ 
+  }
+
+  @container (min-width: 300px) and (max-width: 400px) {
+    .cuiners__imatge{
+      height: 350px;
+      width: 100%;
+    }
+  
+
+  }
+
+  @container (min-width: 400px) and (max-width: 700px) {
+    .cuiners__imatge{
+      height: 450px;
+      width: 100%;
+    }
+  
+    .cuiners__xarxes{
+      
+  
+      i{
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  @container (min-width: 700px)  {
+    .cuiners__imatge{
+      height: 450px;
+      width: 100%;
+    }
+  
+    .cuiners__xarxes{
+      
+  
+      i{
+        margin-bottom: 5px;
+      }
+    }
+  }
+
 }

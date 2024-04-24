@@ -12,7 +12,6 @@ $website-Amplaria: 1280px;
 $main-color: #ffbc00;
 $light-color: #f4f4f4;
 $dark-color: #333;
-$back-image: url('../images/PontGoldenGate1.jpg');
 $medium-color: #ccc;
 $color-secundari:  #fff;
 $gray: #5a5a5a;
@@ -46,5 +45,21 @@ $claret:  #fee9e9a5;
 $galeriaFons:  #fee9e91b;
 $color2: color.hwb(29.655, 32%, 0%);
 /*
-
+Personalització de boostrap
 */
+
+//Personalització Components Boostrap
+
+/****** Personalització galeria imatges slider*/
+
+$carousel-control-color:             $blue;
+$carousel-control-width:             15%;
+$carousel-indicator-width:           30px;
+$carousel-indicator-height:          3px;
+$carousel-indicator-hit-area-height: 10px;
+$carousel-indicator-spacer:          3px;
+
+
+
+
+@import "/node_modules/bootstrap/scss/bootstrap.scss";

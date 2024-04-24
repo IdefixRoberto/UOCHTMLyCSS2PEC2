@@ -144,7 +144,15 @@
         align-items: center;
         text-align: center;
         margin-bottom: 2rem;
-        
+        @media (max-width: $tablet) {
+          width: 90%;
+          .location__logo{
+            img{
+              max-width: 300px;
+            }
+            
+          }
+        }
 
       }
     }
@@ -292,4 +300,10 @@
       }
     }
   }
+}
+
+
+.location__logo__img {
+  max-width: 100%; 
+  height: auto;  
 }

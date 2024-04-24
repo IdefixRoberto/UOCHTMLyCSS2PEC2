@@ -215,3 +215,81 @@
 
 
 
+.vall-info {
+  &__process__icon_Amagat {
+    // Ahora oculto todo el div 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    text-align: center;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $phone) {
+      grid-template-columns: 1fr;
+    }
+    
+    &__step {
+      position: absolute;
+      top: -.5vh;
+      right: -.5vh;
+      
+      font-size: 1rem;
+      background-color: $main-color;
+      color: set-text-color($main-color);
+      border-radius: 50%;
+      height: 4rem;
+      width:  4rem;
+      line-height: 1.5;
+      padding: 1rem;
+      transition: all 1.5s;
+      text-align: center;
+      align-items: center;
+      &:hover .vall-info__process__icon_Amagat {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+      }
+      &:hover .vall-info__process__step {
+        background-color: $dark-color;
+        color: aliceblue;
+      }
+    }
+    
+    &__icon {
+      border-radius: 50%;
+      background-color: $dark-color;
+      color: set-text-color($dark-color);
+      padding: 2rem;
+      width: 120px;
+      height: 120px;
+      line-height: 70px;
+      text-align: center;
+      position: relative;
+      transition: all 1.5s;
+
+      &:hover {
+        background-color: $main-color;
+        width: 170px;
+        height: 170px;
+        line-height: 100px;
+        h3 {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .vall-info__process__step {
+          background-color: $dark-color;
+          color: aliceblue;
+        }
+      }
+    }
+  }
+}

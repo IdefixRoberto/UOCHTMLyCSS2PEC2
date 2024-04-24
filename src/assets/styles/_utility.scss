@@ -268,3 +268,14 @@ input[class^='boto-']:hover{
     .fa-discord:hover {
       color: #7289da;
     }
+
+    @function set-text-color($color){
+      //lightness es el brillo/luminositat 
+      @if(lightness($color)>50){
+          @return black;
+      }
+      @else{
+          @return #fff;
+      }
+      }
+  
